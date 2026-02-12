@@ -17,8 +17,8 @@
 <style>
   :root {
     --ivory: #F5F0EB; --warm-white: #FAF8F5; --charcoal: #2A2A28;
-    --gold: #96783E; --gold-light: #B8965A; --sage: #8A9A7B;
-    --sage-muted: #A8B49E; --stone: #7A756F; --deep-green: #3A4A38; --cream: #EDE8E0;
+    --gold: #7D6432; --gold-light: #A6874A; --sage: #6E8362;
+    --sage-muted: #A8B49E; --stone: #5A5650; --deep-green: #3A4A38; --cream: #EDE8E0;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
@@ -52,7 +52,7 @@
 
   /* COMMONS */
   section { padding:clamp(60px,10vw,120px) clamp(24px,5vw,80px); }
-  .section-label { font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:16px; }
+  .section-label { font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:16px; }
   .section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,4vw,3.5rem); font-weight:300; line-height:1.15; color:var(--charcoal); max-width:650px; }
   .section-title em { font-style:italic; color:var(--sage); }
 
@@ -91,9 +91,9 @@
 
   /* ABOUT */
   .about { background:var(--warm-white); display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px,6vw,100px); align-items:center; }
-  .about-text p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:300; margin-top:28px; max-width:500px; }
+  .about-text p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:400; margin-top:28px; max-width:500px; }
   .about-credit { margin-top:32px; padding-top:24px; border-top:1px solid rgba(184,150,90,.2); }
-  .about-credit-item { font-size:11px; letter-spacing:1px; color:var(--stone); margin-bottom:8px; font-weight:300; }
+  .about-credit-item { font-size:12px; letter-spacing:1px; color:var(--stone); margin-bottom:8px; font-weight:400; }
   .about-credit-item strong { color:var(--gold); font-weight:600; text-transform:uppercase; letter-spacing:2px; font-size:10px; }
   .about-visual { position:relative; height:500px; overflow:hidden; }
   .about-visual::before { content:''; position:absolute; inset:20px; border:1px solid var(--gold); opacity:.3; z-index:1; pointer-events:none; }
@@ -109,7 +109,7 @@
   /* LIFESTYLE */
   .lifestyle { background:var(--warm-white); }
   .lifestyle-intro { max-width:700px; margin-bottom:60px; }
-  .lifestyle-intro p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:300; margin-top:24px; }
+  .lifestyle-intro p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:400; margin-top:24px; }
   .lifestyle-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
   .lifestyle-card { position:relative; padding:48px 32px; background:var(--cream); border:1px solid rgba(184,150,90,.12); transition:all .5s; overflow:hidden; }
   .lifestyle-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:3px; background:linear-gradient(90deg,var(--gold),var(--sage-muted)); transform:scaleX(0); transform-origin:left; transition:transform .5s; }
@@ -117,16 +117,16 @@
   .lifestyle-card:hover { transform:translateY(-4px); box-shadow:0 20px 60px rgba(42,42,40,.08); }
   .lifestyle-number { font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:400; color:var(--gold); line-height:1; margin-bottom:20px; }
   .lifestyle-card h3 { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:400; margin-bottom:12px; }
-  .lifestyle-card p { font-size:13px; line-height:1.75; color:var(--stone); font-weight:300; }
+  .lifestyle-card p { font-size:13px; line-height:1.75; color:var(--stone); font-weight:400; }
 
   /* MATERIALS */
   .materials { background:var(--cream); }
   .materials-intro { max-width:700px; margin-bottom:60px; }
-  .materials-intro p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:300; margin-top:24px; }
+  .materials-intro p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:400; margin-top:24px; }
   .materials-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
   .material-item { padding:32px; background:var(--warm-white); border:1px solid rgba(184,150,90,.1); }
   .material-item h4 { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; color:var(--charcoal); margin-bottom:10px; }
-  .material-item p { font-size:12px; line-height:1.7; color:var(--stone); font-weight:300; }
+  .material-item p { font-size:13px; line-height:1.7; color:var(--stone); font-weight:400; }
 
   /* SPECS */
   .specs { background:var(--deep-green); color:var(--ivory); display:grid; grid-template-columns:1fr 1.2fr; gap:clamp(40px,8vw,120px); align-items:start; }
@@ -153,20 +153,20 @@
   /* NEIGHBOURHOOD */
   .neighbourhood { background:var(--warm-white); }
   .neighbourhood-intro { max-width:700px; margin-bottom:60px; }
-  .neighbourhood-intro p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:300; margin-top:24px; }
+  .neighbourhood-intro p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:400; margin-top:24px; }
   .neighbourhood-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
   .neighbourhood-item { text-align:center; padding:32px 20px; }
   .neighbourhood-icon { font-size:28px; margin-bottom:16px; }
   .neighbourhood-item h4 { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; color:var(--charcoal); margin-bottom:8px; }
-  .neighbourhood-item p { font-size:12px; line-height:1.7; color:var(--stone); font-weight:300; }
+  .neighbourhood-item p { font-size:13px; line-height:1.7; color:var(--stone); font-weight:400; }
   .neighbourhood-item .distance { display:block; font-size:11px; letter-spacing:1px; color:var(--gold); font-weight:600; margin-top:8px; }
 
   /* PRICE */
   .price-section { background:var(--cream); text-align:center; padding:clamp(80px,12vw,160px) clamp(24px,5vw,80px); }
   .price-amount { font-family:'Cormorant Garamond',serif; font-size:clamp(3.5rem,8vw,7rem); font-weight:300; color:var(--charcoal); line-height:1; margin-bottom:8px; }
   .price-amount .currency { font-size:.45em; vertical-align:super; color:var(--gold); font-weight:400; }
-  .price-note { font-size:14px; color:var(--stone); font-weight:300; letter-spacing:1px; margin-bottom:8px; }
-  .price-details { font-size:13px; color:var(--stone); font-weight:300; opacity:.7; }
+  .price-note { font-size:14px; color:var(--stone); font-weight:400; letter-spacing:1px; margin-bottom:8px; }
+  .price-details { font-size:14px; color:var(--stone); font-weight:400; opacity:.85; }
   .price-divider { width:60px; height:1px; background:var(--gold); margin:0 auto 48px; }
 
   /* CTA */
@@ -241,26 +241,27 @@
 <section class="gallery" id="galeria">
   <div class="gallery-header reveal">
     <div><div class="section-label">Galeria</div><h2 class="section-title">Conheça cada <em>detalhe</em></h2></div>
-    <div class="gallery-counter"><span id="slideNum">01</span> / 10</div>
+    <div class="gallery-counter"><span id="slideNum">01</span> / 11</div>
   </div>
   <div class="carousel-wrap reveal">
     <div class="carousel-track" id="carouselTrack">
-      <div class="carousel-slide" onclick="openLB(0)"><img src="images/hero-bg.jpg" alt="Fachada"><div class="carousel-label">Fachada</div></div>
-      <div class="carousel-slide" onclick="openLB(1)"><img src="images/gallery-01.jpg" alt="Living" loading="lazy"><div class="carousel-label">Living</div></div>
-      <div class="carousel-slide" onclick="openLB(2)"><img src="images/gallery-02.jpg" alt="Sala de Jantar" loading="lazy"><div class="carousel-label">Sala de Jantar</div></div>
-      <div class="carousel-slide" onclick="openLB(3)"><img src="images/gallery-03.jpg" alt="Cozinha" loading="lazy"><div class="carousel-label">Cozinha</div></div>
-      <div class="carousel-slide" onclick="openLB(4)"><img src="images/gallery-04.jpg" alt="Home Theater" loading="lazy"><div class="carousel-label">Home Theater</div></div>
-      <div class="carousel-slide" onclick="openLB(5)"><img src="images/gallery-05.jpg" alt="Home Office" loading="lazy"><div class="carousel-label">Home Office</div></div>
-      <div class="carousel-slide" onclick="openLB(6)"><img src="images/gallery-06.jpg" alt="Suítes" loading="lazy"><div class="carousel-label">Suítes</div></div>
-      <div class="carousel-slide" onclick="openLB(7)"><img src="images/gallery-07.jpg" alt="Mezanino" loading="lazy"><div class="carousel-label">Mezanino</div></div>
-      <div class="carousel-slide" onclick="openLB(8)"><img src="images/cta-bg.jpg" alt="Casa da Piscina" loading="lazy"><div class="carousel-label">Casa da Piscina</div></div>
-      <div class="carousel-slide" onclick="openLB(9)"><img src="images/gallery-09.jpg" alt="Espaço Gourmet" loading="lazy"><div class="carousel-label">Espaço Gourmet</div></div>
+      <div class="carousel-slide" onclick="openLB(0)"><img src="images/fachada-frente.jpg" alt="Fachada da Frente"><div class="carousel-label">Fachada da Frente</div></div>
+      <div class="carousel-slide" onclick="openLB(1)"><img src="images/hero-bg.jpg" alt="Fachada de Trás" loading="lazy"><div class="carousel-label">Fachada de Trás</div></div>
+      <div class="carousel-slide" onclick="openLB(2)"><img src="images/gallery-01.jpg" alt="Living" loading="lazy"><div class="carousel-label">Living</div></div>
+      <div class="carousel-slide" onclick="openLB(3)"><img src="images/gallery-02.jpg" alt="Sala de Jantar" loading="lazy"><div class="carousel-label">Sala de Jantar</div></div>
+      <div class="carousel-slide" onclick="openLB(4)"><img src="images/gallery-03.jpg" alt="Cozinha" loading="lazy"><div class="carousel-label">Cozinha</div></div>
+      <div class="carousel-slide" onclick="openLB(5)"><img src="images/gallery-04.jpg" alt="Home Theater" loading="lazy"><div class="carousel-label">Home Theater</div></div>
+      <div class="carousel-slide" onclick="openLB(6)"><img src="images/gallery-05.jpg" alt="Home Office" loading="lazy"><div class="carousel-label">Home Office</div></div>
+      <div class="carousel-slide" onclick="openLB(7)"><img src="images/gallery-06.jpg" alt="Suítes" loading="lazy"><div class="carousel-label">Suítes</div></div>
+      <div class="carousel-slide" onclick="openLB(8)"><img src="images/gallery-07.jpg" alt="Mezanino" loading="lazy"><div class="carousel-label">Mezanino</div></div>
+      <div class="carousel-slide" onclick="openLB(9)"><img src="images/cta-bg.jpg" alt="Casa da Piscina" loading="lazy"><div class="carousel-label">Casa da Piscina</div></div>
+      <div class="carousel-slide" onclick="openLB(10)"><img src="images/gallery-09.jpg" alt="Espaço Gourmet" loading="lazy"><div class="carousel-label">Espaço Gourmet</div></div>
     </div>
   </div>
   <div class="carousel-nav reveal" style="padding:0 clamp(24px,5vw,80px);">
     <button class="carousel-btn" onclick="moveCarousel(-1)" aria-label="Foto anterior">&#8249;</button>
     <button class="carousel-btn" onclick="moveCarousel(1)" aria-label="Próxima foto">&#8250;</button>
-    <div class="carousel-progress"><div class="carousel-progress-bar" id="progressBar" style="width:9.1%"></div></div>
+    <div class="carousel-progress"><div class="carousel-progress-bar" id="progressBar" style="width:9.09%"></div></div>
   </div>
 </section>
 
@@ -463,6 +464,7 @@
 
   // Lightbox
   const imgs = [
+    'images/fachada-frente.jpg',
     'images/hero-bg.jpg',
     'images/gallery-01.jpg',
     'images/gallery-02.jpg',
