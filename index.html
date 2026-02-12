@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Residencial Vila Verde · Casa 14A · Campinas</title>
+<meta name="description" content="Casa 14A no Residencial Vila Verde, Campinas. 817m² de construção, 4 suítes, 9 banheiros, 12 vagas. Arquitetura contemporânea por Milão Arquitetos com vista para o Bosque Yitzhak Rabin. R$4.700.000.">
+<meta property="og:title" content="Casa 14A · Residencial Vila Verde · Campinas">
+<meta property="og:description" content="Residência de 817m² com arquitetura contemporânea, 4 suítes com vista para o Bosque Yitzhak Rabin, casa da piscina e acabamentos de altíssimo padrão.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/hero-bg.jpg">
+<meta property="og:locale" content="pt_BR">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #F5F0EB; --warm-white: #FAF8F5; --charcoal: #2A2A28;
+    --gold: #96783E; --gold-light: #B8965A; --sage: #8A9A7B;
+    --sage-muted: #A8B49E; --stone: #7A756F; --deep-green: #3A4A38; --cream: #EDE8E0;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Montserrat',sans-serif; background:var(--warm-white); color:var(--charcoal); overflow-x:hidden; }
+
+  /* NAV */
+  .nav-bar { position:fixed; top:0; left:0; right:0; z-index:100; padding:20px clamp(24px,5vw,80px); display:flex; justify-content:space-between; align-items:center; transition:all .4s; }
+  .nav-bar.scrolled { background:rgba(250,248,245,.95); backdrop-filter:blur(20px); padding:14px clamp(24px,5vw,80px); box-shadow:0 1px 0 rgba(0,0,0,.06); }
+  .nav-logo { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; color:var(--ivory); letter-spacing:2px; transition:color .4s; }
+  .nav-bar.scrolled .nav-logo { color:var(--charcoal); }
+  .nav-cta { padding:10px 28px; background:transparent; border:1px solid rgba(245,240,235,.3); color:var(--ivory); font-size:11px; letter-spacing:2px; text-transform:uppercase; font-family:'Montserrat',sans-serif; font-weight:500; cursor:pointer; transition:all .4s; text-decoration:none; }
+  .nav-bar.scrolled .nav-cta { border-color:var(--gold); color:var(--gold); }
+  .nav-cta:hover { background:var(--gold); color:var(--warm-white); border-color:var(--gold); }
+
+  /* HERO */
+  .hero { position:relative; height:100vh; min-height:700px; display:flex; align-items:flex-end; overflow:hidden; }
+  .hero-bg { position:absolute; inset:0; background:url('images/hero-bg.jpg') center/cover no-repeat; }
+  .hero-overlay { position:absolute; inset:0; background:linear-gradient(180deg,rgba(42,42,40,.08) 0%,rgba(42,42,40,.12) 30%,rgba(42,42,40,.45) 60%,rgba(42,42,40,.85) 100%); }
+  .hero-content { position:relative; z-index:2; padding:60px clamp(24px,5vw,80px); width:100%; animation:fadeUp 1.2s ease-out; }
+  .hero-badge { display:inline-block; padding:8px 20px; border:1px solid rgba(184,150,90,.5); color:var(--gold-light); font-size:11px; letter-spacing:4px; text-transform:uppercase; font-weight:500; margin-bottom:28px; backdrop-filter:blur(4px); background:rgba(184,150,90,.06); }
+  .hero h1 { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(3rem,7vw,6.5rem); line-height:1.05; color:var(--ivory); max-width:800px; margin-bottom:16px; }
+  .hero h1 em { font-style:italic; color:var(--gold-light); }
+  .hero-sub { font-size:clamp(14px,1.5vw,17px); color:rgba(245,240,235,.7); font-weight:300; letter-spacing:1px; max-width:560px; line-height:1.7; margin-bottom:40px; }
+  .hero-stats { display:flex; gap:40px; flex-wrap:wrap; }
+  .hero-stat-value { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,42px); font-weight:300; color:var(--ivory); line-height:1; }
+  .hero-stat-label { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--gold-light); font-weight:500; margin-top:6px; }
+  .scroll-indicator { position:absolute; bottom:30px; left:50%; transform:translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:8px; animation:float 3s ease-in-out infinite; }
+  .scroll-indicator span { font-size:9px; letter-spacing:3px; text-transform:uppercase; color:rgba(245,240,235,.4); }
+  .scroll-line { width:1px; height:40px; background:linear-gradient(to bottom,var(--gold-light),transparent); }
+
+  /* COMMONS */
+  section { padding:clamp(60px,10vw,120px) clamp(24px,5vw,80px); }
+  .section-label { font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:16px; }
+  .section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,4vw,3.5rem); font-weight:300; line-height:1.15; color:var(--charcoal); max-width:650px; }
+  .section-title em { font-style:italic; color:var(--sage); }
+
+  /* CAROUSEL GALLERY */
+  .gallery { background:var(--charcoal); padding:clamp(60px,10vw,100px) clamp(24px,5vw,80px); }
+  .gallery .section-label { color:var(--gold-light); }
+  .gallery .section-title { color:var(--ivory); }
+  .gallery .section-title em { color:var(--gold-light); }
+  .gallery-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:48px; flex-wrap:wrap; gap:20px; }
+  .gallery-counter { font-family:'Cormorant Garamond',serif; font-size:18px; color:rgba(245,240,235,.4); font-weight:300; letter-spacing:1px; }
+  .gallery-counter span { color:var(--gold-light); font-size:24px; }
+  .carousel-wrap { position:relative; overflow:hidden; margin:0 calc(-1 * clamp(24px,5vw,80px)); }
+  .carousel-track { display:flex; gap:12px; transition:transform .6s cubic-bezier(.25,.46,.45,.94); padding:0 clamp(24px,5vw,80px); cursor:grab; }
+  .carousel-track.dragging { transition:none; cursor:grabbing; }
+  .carousel-slide { flex:0 0 65%; height:520px; overflow:hidden; position:relative; border:1px solid rgba(245,240,235,.04); transition:opacity .4s; }
+  .carousel-slide img { width:100%; height:100%; object-fit:cover; transition:transform .7s ease; pointer-events:none; }
+  .carousel-slide:hover img { transform:scale(1.03); }
+  .carousel-slide::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 60%,rgba(20,20,18,.4) 100%); pointer-events:none; }
+  .carousel-label { position:absolute; bottom:20px; left:24px; z-index:2; font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--ivory); font-weight:400; opacity:.8; pointer-events:none; }
+  .carousel-nav { display:flex; gap:8px; margin-top:32px; align-items:center; }
+  .carousel-btn { width:52px; height:52px; border:1px solid rgba(245,240,235,.15); background:transparent; color:var(--ivory); font-size:22px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .3s; }
+  .carousel-btn:hover { border-color:var(--gold); color:var(--gold-light); background:rgba(184,150,90,.06); }
+  .carousel-progress { flex:1; height:2px; background:rgba(245,240,235,.1); margin-left:20px; position:relative; overflow:hidden; }
+  .carousel-progress-bar { height:100%; background:var(--gold-light); transition:width .6s ease; }
+
+  /* LIGHTBOX */
+  .lightbox { display:none; position:fixed; inset:0; z-index:1000; background:rgba(20,20,18,.96); align-items:center; justify-content:center; padding:40px; }
+  .lightbox.active { display:flex; }
+  .lightbox img { max-width:90vw; max-height:85vh; object-fit:contain; }
+  .lb-btn { position:absolute; background:none; border:1px solid rgba(245,240,235,.2); color:var(--ivory); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .3s; }
+  .lb-btn:hover { border-color:var(--gold); color:var(--gold-light); }
+  .lb-close { top:24px; right:32px; width:48px; height:48px; font-size:24px; }
+  .lb-prev { top:50%; left:24px; transform:translateY(-50%); width:56px; height:56px; font-size:22px; }
+  .lb-next { top:50%; right:24px; transform:translateY(-50%); width:56px; height:56px; font-size:22px; }
+  .lb-counter { position:absolute; bottom:24px; left:50%; transform:translateX(-50%); color:rgba(245,240,235,.4); font-size:13px; letter-spacing:2px; }
+
+  /* ABOUT */
+  .about { background:var(--warm-white); display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px,6vw,100px); align-items:center; }
+  .about-text p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:300; margin-top:28px; max-width:500px; }
+  .about-credit { margin-top:32px; padding-top:24px; border-top:1px solid rgba(184,150,90,.2); }
+  .about-credit-item { font-size:11px; letter-spacing:1px; color:var(--stone); margin-bottom:8px; font-weight:300; }
+  .about-credit-item strong { color:var(--gold); font-weight:600; text-transform:uppercase; letter-spacing:2px; font-size:10px; }
+  .about-visual { position:relative; height:500px; overflow:hidden; }
+  .about-visual::before { content:''; position:absolute; inset:20px; border:1px solid var(--gold); opacity:.3; z-index:1; pointer-events:none; }
+  .about-visual img { width:100%; height:100%; object-fit:cover; }
+
+  /* FEATURES */
+  .features { background:var(--warm-white); padding-top:0; }
+  .features-intro { margin-bottom:60px; }
+  .features-mosaic { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+  .feature-tile { position:relative; overflow:hidden; height:320px; }
+  .feature-tile img { width:100%; height:100%; object-fit:cover; transition:transform .7s ease; }
+  .feature-tile:hover img { transform:scale(1.04); }
+  .feature-tile-overlay { position:absolute; bottom:0; left:0; right:0; padding:24px; background:linear-gradient(0deg,rgba(42,42,40,.8) 0%,transparent 100%); }
+  .feature-tile h3 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; color:var(--ivory); margin-bottom:4px; }
+  .feature-tile p { font-size:12px; color:rgba(245,240,235,.6); font-weight:300; }
+
+  /* HIGHLIGHTS */
+  .highlights { background:var(--cream); padding:clamp(40px,6vw,60px) 0; overflow:hidden; }
+  .highlights-track { display:flex; gap:60px; animation:scrollAnim 30s linear infinite; width:max-content; }
+  .highlight-item { display:flex; align-items:center; gap:16px; flex-shrink:0; }
+  .highlight-item .dot { width:6px; height:6px; background:var(--gold); border-radius:50%; }
+  .highlight-item span { font-family:'Cormorant Garamond',serif; font-size:clamp(18px,2vw,24px); font-weight:400; color:var(--charcoal); white-space:nowrap; }
+
+  /* LIFESTYLE */
+  .lifestyle { background:var(--warm-white); }
+  .lifestyle-intro { max-width:700px; margin-bottom:60px; }
+  .lifestyle-intro p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:300; margin-top:24px; }
+  .lifestyle-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .lifestyle-card { position:relative; padding:48px 32px; background:var(--cream); border:1px solid rgba(184,150,90,.12); transition:all .5s; overflow:hidden; }
+  .lifestyle-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:3px; background:linear-gradient(90deg,var(--gold),var(--sage-muted)); transform:scaleX(0); transform-origin:left; transition:transform .5s; }
+  .lifestyle-card:hover::before { transform:scaleX(1); }
+  .lifestyle-card:hover { transform:translateY(-4px); box-shadow:0 20px 60px rgba(42,42,40,.08); }
+  .lifestyle-number { font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:300; color:rgba(184,150,90,.2); line-height:1; margin-bottom:20px; }
+  .lifestyle-card h3 { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:400; margin-bottom:12px; }
+  .lifestyle-card p { font-size:13px; line-height:1.75; color:var(--stone); font-weight:300; }
+
+  /* MATERIALS */
+  .materials { background:var(--cream); }
+  .materials-intro { max-width:700px; margin-bottom:60px; }
+  .materials-intro p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:300; margin-top:24px; }
+  .materials-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .material-item { padding:32px; background:var(--warm-white); border:1px solid rgba(184,150,90,.1); }
+  .material-item h4 { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; color:var(--charcoal); margin-bottom:10px; }
+  .material-item p { font-size:12px; line-height:1.7; color:var(--stone); font-weight:300; }
+
+  /* SPECS */
+  .specs { background:var(--deep-green); color:var(--ivory); display:grid; grid-template-columns:1fr 1.2fr; gap:clamp(40px,8vw,120px); align-items:start; }
+  .specs .section-title { color:var(--ivory); }
+  .specs .section-title em { color:var(--gold-light); }
+  .specs-left p { font-size:15px; line-height:1.85; color:rgba(245,240,235,.6); font-weight:300; margin-top:24px; max-width:400px; }
+  .specs-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(245,240,235,.1); }
+  .spec-item { background:var(--deep-green); padding:28px 24px; }
+  .spec-value { font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:300; color:var(--gold-light); line-height:1; margin-bottom:8px; }
+  .spec-label { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:rgba(245,240,235,.4); }
+
+  /* MAP */
+  .map-section { background:var(--charcoal); padding:clamp(60px,10vw,100px) clamp(24px,5vw,80px); }
+  .map-section .section-label { color:var(--gold-light); }
+  .map-section .section-title { color:var(--ivory); margin-bottom:48px; }
+  .map-section .section-title em { color:var(--gold-light); }
+  .map-wrap { position:relative; width:100%; height:480px; overflow:hidden; border:1px solid rgba(245,240,235,.08); }
+  .map-wrap iframe { width:100%; height:100%; border:0; filter:saturate(0) brightness(.65) contrast(1.2); }
+  .map-overlay { position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg,rgba(42,42,40,.15) 0%,transparent 20%,transparent 80%,rgba(42,42,40,.25) 100%); }
+  .map-details { display:flex; gap:40px; margin-top:32px; flex-wrap:wrap; }
+  .map-detail { color:rgba(245,240,235,.5); font-size:13px; font-weight:300; }
+  .map-detail strong { color:var(--gold-light); font-weight:500; display:block; margin-bottom:4px; font-size:11px; letter-spacing:2px; text-transform:uppercase; }
+
+  /* PRICE */
+  .price-section { background:var(--warm-white); text-align:center; padding:clamp(80px,12vw,160px) clamp(24px,5vw,80px); }
+  .price-amount { font-family:'Cormorant Garamond',serif; font-size:clamp(3.5rem,8vw,7rem); font-weight:300; color:var(--charcoal); line-height:1; margin-bottom:8px; }
+  .price-amount .currency { font-size:.45em; vertical-align:super; color:var(--gold); font-weight:400; }
+  .price-note { font-size:14px; color:var(--stone); font-weight:300; letter-spacing:1px; margin-bottom:8px; }
+  .price-details { font-size:13px; color:var(--stone); font-weight:300; opacity:.7; }
+  .price-divider { width:60px; height:1px; background:var(--gold); margin:0 auto 48px; }
+
+  /* CTA */
+  .cta-section { position:relative; text-align:center; padding:clamp(80px,12vw,140px) clamp(24px,5vw,80px); overflow:hidden; }
+  .cta-bg { position:absolute; inset:0; background:url('images/cta-bg.jpg') center/cover no-repeat; }
+  .cta-overlay { position:absolute; inset:0; background:rgba(42,42,40,.88); }
+  .cta-content { position:relative; z-index:2; }
+  .cta-section .section-title { color:var(--ivory); max-width:600px; margin:0 auto 16px; }
+  .cta-section .section-title em { color:var(--gold-light); }
+  .cta-sub { font-size:15px; color:rgba(245,240,235,.5); font-weight:300; max-width:450px; margin:0 auto 48px; line-height:1.7; }
+  .cta-buttons { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+  .btn-primary { display:inline-block; padding:16px 48px; background:var(--gold); color:var(--charcoal); font-size:12px; letter-spacing:3px; text-transform:uppercase; font-family:'Montserrat',sans-serif; font-weight:600; text-decoration:none; transition:all .4s; cursor:pointer; border:none; }
+  .btn-primary:hover { background:var(--gold-light); transform:translateY(-2px); box-shadow:0 10px 40px rgba(184,150,90,.3); }
+  .btn-secondary { display:inline-block; padding:16px 48px; background:transparent; color:var(--ivory); font-size:12px; letter-spacing:3px; text-transform:uppercase; font-family:'Montserrat',sans-serif; font-weight:500; text-decoration:none; border:1px solid rgba(245,240,235,.2); transition:all .4s; cursor:pointer; }
+  .btn-secondary:hover { border-color:var(--gold); color:var(--gold-light); }
+
+  footer { background:#1a1a18; padding:40px clamp(24px,5vw,80px); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+  footer .footer-logo { font-family:'Cormorant Garamond',serif; font-size:16px; color:rgba(245,240,235,.3); letter-spacing:2px; }
+  footer .footer-note { font-size:11px; color:rgba(245,240,235,.2); font-weight:300; letter-spacing:1px; }
+
+  @keyframes fadeUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes float { 0%,100% { transform:translateX(-50%) translateY(0); } 50% { transform:translateX(-50%) translateY(8px); } }
+  @keyframes scrollAnim { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+  .reveal { opacity:0; transform:translateY(30px); transition:all .8s cubic-bezier(.25,.46,.45,.94); }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+
+  @media (max-width:900px) {
+    .about { grid-template-columns:1fr; } .about-visual { height:350px; }
+    .specs { grid-template-columns:1fr; } .lifestyle-grid { grid-template-columns:1fr; }
+    .carousel-slide { flex:0 0 80%; height:380px; }
+    .features-mosaic { grid-template-columns:1fr; } .materials-grid { grid-template-columns:1fr; }
+    .map-wrap { height:350px; }
+  }
+  @media (max-width:600px) {
+    .hero-stats { gap:24px; } .specs-grid { grid-template-columns:1fr; }
+    .cta-buttons { flex-direction:column; align-items:center; }
+    .carousel-slide { flex:0 0 92%; height:280px; } .map-wrap { height:280px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav-bar" id="nav">
+  <div></div>
+  <a href="#contact" class="nav-cta">Agendar Visita</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Exclusivo &middot; Condomínio Fechado</div>
+    <h1>Residência <em>Vila Verde</em></h1>
+    <p class="hero-sub">Arquitetura contemporânea assinada por Milão Arquitetos. 817m² de construção em terreno de 1.633m², com vista para o Bosque Yitzhak Rabin.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-value">817m²</div><div class="hero-stat-label">Construção</div></div>
+      <div class="hero-stat"><div class="hero-stat-value">1.633m²</div><div class="hero-stat-label">Terreno</div></div>
+      <div class="hero-stat"><div class="hero-stat-value">4</div><div class="hero-stat-label">Suítes</div></div>
+      <div class="hero-stat"><div class="hero-stat-value">9</div><div class="hero-stat-label">Banheiros</div></div>
+      <div class="hero-stat"><div class="hero-stat-value">12</div><div class="hero-stat-label">Vagas</div></div>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span>Explore</span><div class="scroll-line"></div></div>
+</section>
+
+<section class="gallery" id="galeria">
+  <div class="gallery-header reveal">
+    <div><div class="section-label">Galeria</div><h2 class="section-title">Conheça cada <em>detalhe</em></h2></div>
+    <div class="gallery-counter"><span id="slideNum">01</span> / 10</div>
+  </div>
+  <div class="carousel-wrap reveal">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-slide" onclick="openLB(0)"><img src="images/hero-bg.jpg" alt="Fachada"><div class="carousel-label">Fachada</div></div>
+      <div class="carousel-slide" onclick="openLB(1)"><img src="images/gallery-01.jpg" alt="Living"><div class="carousel-label">Living</div></div>
+      <div class="carousel-slide" onclick="openLB(2)"><img src="images/gallery-02.jpg" alt="Sala de Jantar"><div class="carousel-label">Sala de Jantar</div></div>
+      <div class="carousel-slide" onclick="openLB(3)"><img src="images/gallery-03.jpg" alt="Cozinha"><div class="carousel-label">Cozinha</div></div>
+      <div class="carousel-slide" onclick="openLB(4)"><img src="images/gallery-04.jpg" alt="Home Theater"><div class="carousel-label">Home Theater</div></div>
+      <div class="carousel-slide" onclick="openLB(5)"><img src="images/gallery-05.jpg" alt="Home Office"><div class="carousel-label">Home Office</div></div>
+      <div class="carousel-slide" onclick="openLB(6)"><img src="images/gallery-06.jpg" alt="Suítes"><div class="carousel-label">Suítes</div></div>
+      <div class="carousel-slide" onclick="openLB(7)"><img src="images/gallery-07.jpg" alt="Mezanino"><div class="carousel-label">Mezanino</div></div>
+      <div class="carousel-slide" onclick="openLB(8)"><img src="images/cta-bg.jpg" alt="Casa da Piscina"><div class="carousel-label">Casa da Piscina</div></div>
+      <div class="carousel-slide" onclick="openLB(9)"><img src="images/gallery-09.jpg" alt="Espaço Gourmet"><div class="carousel-label">Espaço Gourmet</div></div>
+    </div>
+  </div>
+  <div class="carousel-nav reveal" style="padding:0 clamp(24px,5vw,80px);">
+    <button class="carousel-btn" onclick="moveCarousel(-1)" aria-label="Foto anterior">&#8249;</button>
+    <button class="carousel-btn" onclick="moveCarousel(1)" aria-label="Próxima foto">&#8250;</button>
+    <div class="carousel-progress"><div class="carousel-progress-bar" id="progressBar" style="width:9.1%"></div></div>
+  </div>
+</section>
+
+<div class="lightbox" id="lb">
+  <button class="lb-btn lb-close" onclick="closeLB()" aria-label="Fechar">&#10005;</button>
+  <button class="lb-btn lb-prev" onclick="navLB(-1)" aria-label="Foto anterior">&#8249;</button>
+  <img id="lb-img" src="" alt="Foto da residência Vila Verde">
+  <button class="lb-btn lb-next" onclick="navLB(1)" aria-label="Próxima foto">&#8250;</button>
+  <div class="lb-counter" id="lb-counter"></div>
+</div>
+
+<section class="about">
+  <div class="about-text reveal">
+    <div class="section-label">A Residência</div>
+    <h2 class="section-title">Arquitetura contemporânea com vista para o <em>Bosque</em></h2>
+    <p>Residência com arquitetura contemporânea assinada pelo escritório Milão Arquitetos, ambientes espaçosos e construção de excelente qualidade pela Victal Construtora. As quatro suítes são voltadas para o Bosque Yitzhak Rabin, oferecendo privacidade e tranquilidade absolutas.</p>
+    <p>Em destaque, a suíte master possui closet e uma sala de banho com banheira Jacuzzi com vista para a piscina e pátio. O living com pé-direito duplo e grande abertura para o jardim integra todos os ambientes sociais da residência.</p>
+    <div class="about-credit">
+      <div class="about-credit-item"><strong>Arquitetura</strong> &mdash; Milão Arquitetos (Nelson Bergamo &amp; Gustavo Mahlow)</div>
+      <div class="about-credit-item"><strong>Construtora</strong> &mdash; Victal Construtora (Eng. Alberto Alves Netto)</div>
+      <div class="about-credit-item"><strong>Paisagismo</strong> &mdash; Arqta. Gisele Mahlow</div>
+    </div>
+  </div>
+  <div class="about-visual reveal">
+    <img src="images/gallery-01.jpg" alt="Living Vila Verde">
+  </div>
+</section>
+
+<section class="features">
+  <div class="features-intro reveal">
+    <div class="section-label">Destaques</div>
+    <h2 class="section-title">Cada ambiente, uma <em>experiência</em></h2>
+  </div>
+  <div class="features-mosaic reveal">
+    <div class="feature-tile">
+      <img src="images/gallery-03.jpg" alt="Cozinha">
+      <div class="feature-tile-overlay"><h3>Cozinha Gourmet</h3><p>Três cubas inox Mekal, bancada em Granito São Gabriel, despensa ampla</p></div>
+    </div>
+    <div class="feature-tile">
+      <img src="images/gallery-09.jpg" alt="Espaço Gourmet">
+      <div class="feature-tile-overlay"><h3>Casa da Piscina</h3><p>Churrasqueira, forno de pizza, sala envidraçada e pomar</p></div>
+    </div>
+    <div class="feature-tile">
+      <img src="images/gallery-07.jpg" alt="Mezanino">
+      <div class="feature-tile-overlay"><h3>Living &amp; Mezanino</h3><p>Pé-direito duplo com abertura panorâmica para o pátio</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="highlights">
+  <div class="highlights-track">
+    <div class="highlight-item"><div class="dot"></div><span>Home Theater sob medida</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Home Office independente</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Adega &amp; Cristaleira</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Lareira em Mármore Nero Marchina</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Sala de Ginástica</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Suíte Master com Jacuzzi</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Pisos em Peroba Mica</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Vista para o Bosque Yitzhak Rabin</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Portaria 24 Horas</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Home Theater sob medida</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Home Office independente</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Adega &amp; Cristaleira</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Lareira em Mármore Nero Marchina</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Sala de Ginástica</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Suíte Master com Jacuzzi</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Pisos em Peroba Mica</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Vista para o Bosque Yitzhak Rabin</span></div>
+    <div class="highlight-item"><div class="dot"></div><span>Portaria 24 Horas</span></div>
+  </div>
+</div>
+
+<section class="lifestyle">
+  <div class="lifestyle-intro reveal"><div class="section-label">Infraestrutura</div><h2 class="section-title">Espaços que fazem a <em>diferença</em></h2><p>Cada nível da residência foi planejado para oferecer o máximo em conforto, funcionalidade e privacidade, com acabamentos de altíssimo padrão e marcenaria sob medida.</p></div>
+  <div class="lifestyle-grid reveal">
+    <div class="lifestyle-card"><div class="lifestyle-number">01</div><h3>Área Social</h3><p>Living com pé-direito duplo, ampla sala de jantar para 12 pessoas, sala da lareira com cristaleira e adega, home theater com marcenaria sob medida para 10 pessoas, lavabo com bancada em Corian e hall de entrada com porta pivotante de 120cm.</p></div>
+    <div class="lifestyle-card"><div class="lifestyle-number">02</div><h3>Área Íntima</h3><p>4 suítes com closet voltadas para o Bosque Yitzhak Rabin. Suíte master com sala de banho e banheira Jacuzzi com vista para a piscina. Duas suítes com varanda. Home office com entrada independente. Ateliê junto à garagem.</p></div>
+    <div class="lifestyle-card"><div class="lifestyle-number">03</div><h3>Lazer &amp; Serviço</h3><p>Casa da piscina com sala envidraçada, cozinha gourmet com churrasqueira e forno de pizza, pomar ao fundo. Sala de ginástica para 3-4 aparelhos. Suíte de serviço independente. 6 vagas cobertas + 6 descobertas. Dois depósitos.</p></div>
+  </div>
+</section>
+
+<section class="materials">
+  <div class="materials-intro reveal"><div class="section-label">Acabamentos</div><h2 class="section-title">Materiais nobres em cada <em>detalhe</em></h2><p>Seleção criteriosa de materiais nacionais e importados, com marcenaria sob medida em madeiras nobres e acabamentos de primeira linha.</p></div>
+  <div class="materials-grid reveal">
+    <div class="material-item"><h4>Pisos Nobres</h4><p>Tábuas de Peroba Mica e Marfim (Felgueiras Madeiras Nobres) nas salas, quartos e closets. Pedra São Tomé branca com detalhes em Mármore Nero Marchina no living e hall. Mosaico Português externo.</p></div>
+    <div class="material-item"><h4>Mármores &amp; Granitos</h4><p>Bancadas em Granito São Gabriel nas cozinhas. Mármore Piguês (Grécia) nos banheiros. Lareira revestida em Mármore Nero Marchina com acabamento Velvet. Piso atérmico Castelatto no entorno da piscina.</p></div>
+    <div class="material-item"><h4>Marcenaria Sob Medida</h4><p>Home theater em Freijó natural e laca preta. Cristaleira e adega em Freijó natural. Home office em Freijó natural e ebanizado. Closets em Imbuia. Casa da piscina com painel em Teca e rack em Wengue.</p></div>
+    <div class="material-item"><h4>Louças &amp; Metais</h4><p>Toda a linha de louças e metais Deca. Cubas em aço inox Mekal. Cuba do lavabo em Corian branco da Interbagno com espelho em Freijó natural. Box em vidro temperado Blindex.</p></div>
+    <div class="material-item"><h4>Esquadrias &amp; Vidros</h4><p>Esquadrias em alumínio linha Gold da Ema. Guarda-corpos e corrimãos em aço inox escovado. Portas pivotantes com acabamento em laca fosca branca e vidro bisotê. Portão automático em ferro.</p></div>
+    <div class="material-item"><h4>Infraestrutura</h4><p>PABX em todos os ambientes. Circuito de câmeras de segurança. Ar-condicionado nas suítes, home office, ateliê e ginástica. Tubulações Tigre, fiação Pirelli, interruptores Biticino. Reservatórios totalizando 5.500L.</p></div>
+  </div>
+</section>
+
+<section class="specs">
+  <div class="specs-left reveal"><div class="section-label">Especificações</div><h2 class="section-title">Números que <em>impressionam</em></h2><p>Uma residência deste porte é rara no mercado de Campinas. Localização privilegiada a 1,5 km do Galleria Shopping, com fácil acesso à Rodovia Dom Pedro I.</p></div>
+  <div class="specs-grid reveal">
+    <div class="spec-item"><div class="spec-value">817m²</div><div class="spec-label">Área Construída</div></div>
+    <div class="spec-item"><div class="spec-value">1.633m²</div><div class="spec-label">Terreno</div></div>
+    <div class="spec-item"><div class="spec-value">4+1</div><div class="spec-label">Suítes</div></div>
+    <div class="spec-item"><div class="spec-value">9</div><div class="spec-label">Banheiros</div></div>
+    <div class="spec-item"><div class="spec-value">6+6</div><div class="spec-label">Vagas (cob. + desc.)</div></div>
+    <div class="spec-item"><div class="spec-value">5.500L</div><div class="spec-label">Reservatório</div></div>
+    <div class="spec-item"><div class="spec-value">24h</div><div class="spec-label">Segurança</div></div>
+    <div class="spec-item"><div class="spec-value">R$1.982</div><div class="spec-label">Condomínio/mês</div></div>
+  </div>
+</section>
+
+<section class="map-section">
+  <div class="reveal"><div class="section-label">Localização</div><h2 class="section-title" style="color:var(--ivory);">Av. Dr. Carlos Grimaldi, 1171 &mdash; <em style="color:var(--gold-light);">Jardim Madalena</em></h2></div>
+  <div class="map-wrap reveal">
+    <iframe src="https://www.google.com/maps?q=Residencial+Vila+Verde,+Av.+Carlos+Grimaldi+1171,+Campinas,+SP,+Brasil&hl=pt-BR&z=15&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map-overlay"></div>
+  </div>
+  <div class="map-details reveal">
+    <div class="map-detail"><strong>Shopping</strong>1,5 km do Galleria Shopping</div>
+    <div class="map-detail"><strong>Acesso</strong>Rodovia Dom Pedro I</div>
+    <div class="map-detail"><strong>Comércio</strong>Sam&rsquo;s Club &middot; Tauste &middot; Galleria Plaza</div>
+    <div class="map-detail"><strong>Natureza</strong>Bosque Yitzhak Rabin</div>
+  </div>
+</section>
+
+<section class="price-section">
+  <div class="reveal">
+    <div class="section-label">Investimento</div>
+    <div class="price-divider"></div>
+    <div class="price-amount"><span class="currency">R$</span>4.700.000</div>
+    <p class="price-details">Condomínio R$ 1.982/mês &middot; IPTU R$ 28.000/ano</p>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="cta-bg"></div>
+  <div class="cta-overlay"></div>
+  <div class="cta-content reveal">
+    <div class="section-label" style="color:var(--gold-light);">Interesse?</div>
+    <h2 class="section-title">Agende sua visita <em>exclusiva</em></h2>
+    <p class="cta-sub">Entre em contato para conhecer pessoalmente cada detalhe desta residência excepcional no Residencial Vila Verde.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/5519999999999?text=Olá! Tenho interesse na casa 14A do Residencial Vila Verde - R$4.700.000" class="btn-primary" target="_blank">WhatsApp</a>
+      <a href="mailto:contato@exemplo.com?subject=Interesse - Casa 14A Vila Verde Campinas" class="btn-secondary">Enviar E-mail</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Vila Verde 14A &middot; Campinas</div>
+  <div class="footer-note">Av. Dr. Carlos Grimaldi, 1171 &middot; Jardim Madalena &middot; Campinas, SP &middot; CEP 13091-906</div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 80));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) { setTimeout(() => entry.target.classList.add('visible'), i * 80); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Carousel
+  const track = document.getElementById('carouselTrack');
+  const slides = track.querySelectorAll('.carousel-slide');
+  const total = slides.length;
+  let cur = 0;
+
+  function goTo(idx) {
+    cur = Math.max(0, Math.min(idx, total - 1));
+    const offset = slides[cur].offsetLeft - parseInt(getComputedStyle(track).paddingLeft);
+    track.style.transform = 'translateX(' + (-offset) + 'px)';
+    document.getElementById('slideNum').textContent = String(cur + 1).padStart(2, '0');
+    document.getElementById('progressBar').style.width = ((cur + 1) / total * 100) + '%';
+  }
+  function moveCarousel(dir) { goTo(cur + dir); }
+
+  let dragStart = 0, dragOff = 0, dragging = false;
+  track.addEventListener('mousedown', e => { dragging = true; dragStart = e.clientX; track.classList.add('dragging'); });
+  track.addEventListener('touchstart', e => { dragging = true; dragStart = e.touches[0].clientX; }, {passive:true});
+  window.addEventListener('mousemove', e => { if (dragging) dragOff = e.clientX - dragStart; });
+  window.addEventListener('touchmove', e => { if (dragging) dragOff = e.touches[0].clientX - dragStart; }, {passive:true});
+  function endDrag() { if (!dragging) return; dragging = false; track.classList.remove('dragging'); if (Math.abs(dragOff) > 60) moveCarousel(dragOff < 0 ? 1 : -1); dragOff = 0; }
+  window.addEventListener('mouseup', endDrag);
+  window.addEventListener('touchend', endDrag);
+
+  // Lightbox
+  const imgs = [
+    'images/hero-bg.jpg',
+    'images/gallery-01.jpg',
+    'images/gallery-02.jpg',
+    'images/gallery-03.jpg',
+    'images/gallery-04.jpg',
+    'images/gallery-05.jpg',
+    'images/gallery-06.jpg',
+    'images/gallery-07.jpg',
+    'images/cta-bg.jpg',
+    'images/gallery-09.jpg'];
+  let ci = 0;
+  function openLB(i) { ci = i; updLB(); document.getElementById('lb').classList.add('active'); document.body.style.overflow = 'hidden'; }
+  function closeLB() { document.getElementById('lb').classList.remove('active'); document.body.style.overflow = ''; }
+  function navLB(dir) { ci = (ci + dir + imgs.length) % imgs.length; updLB(); }
+  function updLB() { document.getElementById('lb-img').src = imgs[ci]; document.getElementById('lb-counter').textContent = (ci+1) + ' / ' + imgs.length; }
+  document.addEventListener('keydown', e => {
+    if (document.getElementById('lb').classList.contains('active')) {
+      if (e.key==='Escape') closeLB(); if (e.key==='ArrowRight') navLB(1); if (e.key==='ArrowLeft') navLB(-1);
+    }
+  });
+  document.getElementById('lb').addEventListener('click', e => { if (e.target === document.getElementById('lb')) closeLB(); });
+</script>
+</body>
+</html>
