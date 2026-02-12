@@ -10,6 +10,9 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="images/hero-bg.jpg">
 <meta property="og:locale" content="pt_BR">
+<!-- Google Analytics 4 — replace G-XXXXXXXXXX with your measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -96,17 +99,6 @@
   .about-visual::before { content:''; position:absolute; inset:20px; border:1px solid var(--gold); opacity:.3; z-index:1; pointer-events:none; }
   .about-visual img { width:100%; height:100%; object-fit:cover; }
 
-  /* FEATURES */
-  .features { background:var(--warm-white); padding-top:0; }
-  .features-intro { margin-bottom:60px; }
-  .features-mosaic { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
-  .feature-tile { position:relative; overflow:hidden; height:320px; }
-  .feature-tile img { width:100%; height:100%; object-fit:cover; transition:transform .7s ease; }
-  .feature-tile:hover img { transform:scale(1.04); }
-  .feature-tile-overlay { position:absolute; bottom:0; left:0; right:0; padding:24px; background:linear-gradient(0deg,rgba(42,42,40,.8) 0%,transparent 100%); }
-  .feature-tile h3 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; color:var(--ivory); margin-bottom:4px; }
-  .feature-tile p { font-size:12px; color:rgba(245,240,235,.6); font-weight:300; }
-
   /* HIGHLIGHTS */
   .highlights { background:var(--cream); padding:clamp(40px,6vw,60px) 0; overflow:hidden; }
   .highlights-track { display:flex; gap:60px; animation:scrollAnim 30s linear infinite; width:max-content; }
@@ -158,6 +150,17 @@
   .map-detail { color:rgba(245,240,235,.5); font-size:13px; font-weight:300; }
   .map-detail strong { color:var(--gold-light); font-weight:500; display:block; margin-bottom:4px; font-size:11px; letter-spacing:2px; text-transform:uppercase; }
 
+  /* NEIGHBOURHOOD */
+  .neighbourhood { background:var(--warm-white); }
+  .neighbourhood-intro { max-width:700px; margin-bottom:60px; }
+  .neighbourhood-intro p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:300; margin-top:24px; }
+  .neighbourhood-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+  .neighbourhood-item { text-align:center; padding:32px 20px; }
+  .neighbourhood-icon { font-size:28px; margin-bottom:16px; }
+  .neighbourhood-item h4 { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; color:var(--charcoal); margin-bottom:8px; }
+  .neighbourhood-item p { font-size:12px; line-height:1.7; color:var(--stone); font-weight:300; }
+  .neighbourhood-item .distance { display:block; font-size:11px; letter-spacing:1px; color:var(--gold); font-weight:600; margin-top:8px; }
+
   /* PRICE */
   .price-section { background:var(--warm-white); text-align:center; padding:clamp(80px,12vw,160px) clamp(24px,5vw,80px); }
   .price-amount { font-family:'Cormorant Garamond',serif; font-size:clamp(3.5rem,8vw,7rem); font-weight:300; color:var(--charcoal); line-height:1; margin-bottom:8px; }
@@ -180,6 +183,11 @@
   .btn-secondary { display:inline-block; padding:16px 48px; background:transparent; color:var(--ivory); font-size:12px; letter-spacing:3px; text-transform:uppercase; font-family:'Montserrat',sans-serif; font-weight:500; text-decoration:none; border:1px solid rgba(245,240,235,.2); transition:all .4s; cursor:pointer; }
   .btn-secondary:hover { border-color:var(--gold); color:var(--gold-light); }
 
+  /* FLOATING WHATSAPP */
+  .whatsapp-float { position:fixed; bottom:28px; right:28px; z-index:99; width:56px; height:56px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(0,0,0,.25); transition:all .3s; text-decoration:none; }
+  .whatsapp-float:hover { transform:scale(1.1); box-shadow:0 6px 28px rgba(37,211,102,.4); }
+  .whatsapp-float svg { width:28px; height:28px; fill:#fff; }
+
   footer { background:#1a1a18; padding:40px clamp(24px,5vw,80px); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
   footer .footer-logo { font-family:'Cormorant Garamond',serif; font-size:16px; color:rgba(245,240,235,.3); letter-spacing:2px; }
   footer .footer-note { font-size:11px; color:rgba(245,240,235,.2); font-weight:300; letter-spacing:1px; }
@@ -194,11 +202,12 @@
     .about { grid-template-columns:1fr; } .about-visual { height:350px; }
     .specs { grid-template-columns:1fr; } .lifestyle-grid { grid-template-columns:1fr; }
     .carousel-slide { flex:0 0 80%; height:380px; }
-    .features-mosaic { grid-template-columns:1fr; } .materials-grid { grid-template-columns:1fr; }
+    .materials-grid { grid-template-columns:1fr; } .neighbourhood-grid { grid-template-columns:1fr 1fr; }
     .map-wrap { height:350px; }
   }
   @media (max-width:600px) {
     .hero-stats { gap:24px; } .specs-grid { grid-template-columns:1fr; }
+    .neighbourhood-grid { grid-template-columns:1fr; }
     .cta-buttons { flex-direction:column; align-items:center; }
     .carousel-slide { flex:0 0 92%; height:280px; } .map-wrap { height:280px; }
   }
@@ -237,15 +246,15 @@
   <div class="carousel-wrap reveal">
     <div class="carousel-track" id="carouselTrack">
       <div class="carousel-slide" onclick="openLB(0)"><img src="images/hero-bg.jpg" alt="Fachada"><div class="carousel-label">Fachada</div></div>
-      <div class="carousel-slide" onclick="openLB(1)"><img src="images/gallery-01.jpg" alt="Living"><div class="carousel-label">Living</div></div>
-      <div class="carousel-slide" onclick="openLB(2)"><img src="images/gallery-02.jpg" alt="Sala de Jantar"><div class="carousel-label">Sala de Jantar</div></div>
-      <div class="carousel-slide" onclick="openLB(3)"><img src="images/gallery-03.jpg" alt="Cozinha"><div class="carousel-label">Cozinha</div></div>
-      <div class="carousel-slide" onclick="openLB(4)"><img src="images/gallery-04.jpg" alt="Home Theater"><div class="carousel-label">Home Theater</div></div>
-      <div class="carousel-slide" onclick="openLB(5)"><img src="images/gallery-05.jpg" alt="Home Office"><div class="carousel-label">Home Office</div></div>
-      <div class="carousel-slide" onclick="openLB(6)"><img src="images/gallery-06.jpg" alt="Suítes"><div class="carousel-label">Suítes</div></div>
-      <div class="carousel-slide" onclick="openLB(7)"><img src="images/gallery-07.jpg" alt="Mezanino"><div class="carousel-label">Mezanino</div></div>
-      <div class="carousel-slide" onclick="openLB(8)"><img src="images/cta-bg.jpg" alt="Casa da Piscina"><div class="carousel-label">Casa da Piscina</div></div>
-      <div class="carousel-slide" onclick="openLB(9)"><img src="images/gallery-09.jpg" alt="Espaço Gourmet"><div class="carousel-label">Espaço Gourmet</div></div>
+      <div class="carousel-slide" onclick="openLB(1)"><img src="images/gallery-01.jpg" alt="Living" loading="lazy"><div class="carousel-label">Living</div></div>
+      <div class="carousel-slide" onclick="openLB(2)"><img src="images/gallery-02.jpg" alt="Sala de Jantar" loading="lazy"><div class="carousel-label">Sala de Jantar</div></div>
+      <div class="carousel-slide" onclick="openLB(3)"><img src="images/gallery-03.jpg" alt="Cozinha" loading="lazy"><div class="carousel-label">Cozinha</div></div>
+      <div class="carousel-slide" onclick="openLB(4)"><img src="images/gallery-04.jpg" alt="Home Theater" loading="lazy"><div class="carousel-label">Home Theater</div></div>
+      <div class="carousel-slide" onclick="openLB(5)"><img src="images/gallery-05.jpg" alt="Home Office" loading="lazy"><div class="carousel-label">Home Office</div></div>
+      <div class="carousel-slide" onclick="openLB(6)"><img src="images/gallery-06.jpg" alt="Suítes" loading="lazy"><div class="carousel-label">Suítes</div></div>
+      <div class="carousel-slide" onclick="openLB(7)"><img src="images/gallery-07.jpg" alt="Mezanino" loading="lazy"><div class="carousel-label">Mezanino</div></div>
+      <div class="carousel-slide" onclick="openLB(8)"><img src="images/cta-bg.jpg" alt="Casa da Piscina" loading="lazy"><div class="carousel-label">Casa da Piscina</div></div>
+      <div class="carousel-slide" onclick="openLB(9)"><img src="images/gallery-09.jpg" alt="Espaço Gourmet" loading="lazy"><div class="carousel-label">Espaço Gourmet</div></div>
     </div>
   </div>
   <div class="carousel-nav reveal" style="padding:0 clamp(24px,5vw,80px);">
@@ -276,28 +285,7 @@
     </div>
   </div>
   <div class="about-visual reveal">
-    <img src="images/gallery-01.jpg" alt="Living Vila Verde">
-  </div>
-</section>
-
-<section class="features">
-  <div class="features-intro reveal">
-    <div class="section-label">Destaques</div>
-    <h2 class="section-title">Cada ambiente, uma <em>experiência</em></h2>
-  </div>
-  <div class="features-mosaic reveal">
-    <div class="feature-tile">
-      <img src="images/gallery-03.jpg" alt="Cozinha">
-      <div class="feature-tile-overlay"><h3>Cozinha Gourmet</h3><p>Três cubas inox Mekal, bancada em Granito São Gabriel, despensa ampla</p></div>
-    </div>
-    <div class="feature-tile">
-      <img src="images/gallery-09.jpg" alt="Espaço Gourmet">
-      <div class="feature-tile-overlay"><h3>Casa da Piscina</h3><p>Churrasqueira, forno de pizza, sala envidraçada e pomar</p></div>
-    </div>
-    <div class="feature-tile">
-      <img src="images/gallery-07.jpg" alt="Mezanino">
-      <div class="feature-tile-overlay"><h3>Living &amp; Mezanino</h3><p>Pé-direito duplo com abertura panorâmica para o pátio</p></div>
-    </div>
+    <img src="images/gallery-01.jpg" alt="Living Vila Verde" loading="lazy">
   </div>
 </section>
 
@@ -373,6 +361,40 @@
   </div>
 </section>
 
+<section class="neighbourhood">
+  <div class="neighbourhood-intro reveal">
+    <div class="section-label">Vizinhança</div>
+    <h2 class="section-title">Tudo por perto, com <em>tranquilidade</em></h2>
+    <p>O Residencial Vila Verde oferece a combinação perfeita entre privacidade e conveniência. A poucos minutos de shopping, escolas, hospitais e acesso rodoviário.</p>
+  </div>
+  <div class="neighbourhood-grid reveal">
+    <div class="neighbourhood-item">
+      <div class="neighbourhood-icon">&#128722;</div>
+      <h4>Compras &amp; Gastronomia</h4>
+      <p>Galleria Shopping, Sam&rsquo;s Club, Tauste Supermercados e Galleria Plaza com restaurantes e serviços</p>
+      <span class="distance">1,5 km</span>
+    </div>
+    <div class="neighbourhood-item">
+      <div class="neighbourhood-icon">&#127891;</div>
+      <h4>Escolas &amp; Universidades</h4>
+      <p>Colégio Notre Dame, Escola Comunitária de Campinas, PUC-Campinas e UNICAMP</p>
+      <span class="distance">3 &ndash; 10 km</span>
+    </div>
+    <div class="neighbourhood-item">
+      <div class="neighbourhood-icon">&#127973;</div>
+      <h4>Saúde</h4>
+      <p>Hospital Vera Cruz, Hospital Madre Theodora e Centro Médico de Campinas</p>
+      <span class="distance">4 &ndash; 8 km</span>
+    </div>
+    <div class="neighbourhood-item">
+      <div class="neighbourhood-icon">&#128739;</div>
+      <h4>Acesso &amp; Mobilidade</h4>
+      <p>Rodovia Dom Pedro I, Rodovia Anhanguera e Aeroporto de Viracopos</p>
+      <span class="distance">2 &ndash; 18 km</span>
+    </div>
+  </div>
+</section>
+
 <section class="price-section">
   <div class="reveal">
     <div class="section-label">Investimento</div>
@@ -395,6 +417,10 @@
     </div>
   </div>
 </section>
+
+<a href="https://wa.me/5519999999999?text=Olá! Tenho interesse na casa 14A do Residencial Vila Verde - R$4.700.000" class="whatsapp-float" target="_blank" aria-label="Contato via WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
 <footer>
   <div class="footer-logo">Vila Verde 14A &middot; Campinas</div>
