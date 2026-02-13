@@ -241,7 +241,7 @@
 <section class="gallery" id="galeria">
   <div class="gallery-header reveal">
     <div><div class="section-label">Galeria</div><h2 class="section-title">Conheça cada <em>detalhe</em></h2></div>
-    <div class="gallery-counter"><span id="slideNum">01</span> / 11</div>
+    <div class="gallery-counter"><span id="slideNum">01</span> / 12</div>
   </div>
   <div class="carousel-wrap reveal">
     <div class="carousel-track" id="carouselTrack">
@@ -256,12 +256,13 @@
       <div class="carousel-slide" onclick="openLB(8)"><img src="images/gallery-07.jpg" alt="Mezanino" loading="lazy"><div class="carousel-label">Mezanino</div></div>
       <div class="carousel-slide" onclick="openLB(9)"><img src="images/cta-bg.jpg" alt="Casa da Piscina" loading="lazy"><div class="carousel-label">Casa da Piscina</div></div>
       <div class="carousel-slide" onclick="openLB(10)"><img src="images/gallery-09.jpg" alt="Espaço Gourmet" loading="lazy"><div class="carousel-label">Espaço Gourmet</div></div>
+      <div class="carousel-slide" onclick="openLB(11)"><img src="images/piscina.jpg" alt="Piscina" loading="lazy"><div class="carousel-label">Piscina</div></div>
     </div>
   </div>
   <div class="carousel-nav reveal" style="padding:0 clamp(24px,5vw,80px);">
     <button class="carousel-btn" onclick="moveCarousel(-1)" aria-label="Foto anterior">&#8249;</button>
     <button class="carousel-btn" onclick="moveCarousel(1)" aria-label="Próxima foto">&#8250;</button>
-    <div class="carousel-progress"><div class="carousel-progress-bar" id="progressBar" style="width:9.09%"></div></div>
+    <div class="carousel-progress"><div class="carousel-progress-bar" id="progressBar" style="width:8.33%"></div></div>
   </div>
 </section>
 
@@ -286,7 +287,7 @@
     </div>
   </div>
   <div class="about-visual reveal">
-    <img src="images/gallery-01.jpg" alt="Living Vila Verde" loading="lazy">
+    <img src="images/gallery-02.jpg" alt="Sala de Jantar Vila Verde" loading="lazy">
   </div>
 </section>
 
@@ -474,7 +475,8 @@
     'images/gallery-06.jpg',
     'images/gallery-07.jpg',
     'images/cta-bg.jpg',
-    'images/gallery-09.jpg'];
+    'images/gallery-09.jpg',
+    'images/piscina.jpg'];
   let ci = 0;
   function openLB(i) { ci = i; updLB(); document.getElementById('lb').classList.add('active'); document.body.style.overflow = 'hidden'; }
   function closeLB() { document.getElementById('lb').classList.remove('active'); document.body.style.overflow = ''; }
