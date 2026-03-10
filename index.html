@@ -91,11 +91,11 @@
   /* HERO */
   .hero { position:relative; height:100vh; min-height:700px; display:flex; align-items:flex-end; overflow:hidden; }
   .hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-  .hero-overlay { position:absolute; inset:0; background:linear-gradient(180deg,rgba(42,42,40,.25) 0%,rgba(42,42,40,.35) 30%,rgba(42,42,40,.6) 60%,rgba(42,42,40,.88) 100%); }
+  .hero-overlay { position:absolute; inset:0; background:linear-gradient(180deg,rgba(20,18,16,.45) 0%,rgba(20,18,16,.55) 30%,rgba(20,18,16,.72) 60%,rgba(20,18,16,.92) 100%); }
   .hero-content { position:relative; z-index:2; padding:60px clamp(24px,5vw,80px); width:100%; animation:fadeUp 1.2s ease-out; }
   .hero-badge { display:inline-block; padding:8px 20px; border:1px solid #C9A84C; color:#C9A84C; font-size:11px; letter-spacing:4px; text-transform:uppercase; font-weight:500; margin-bottom:28px; backdrop-filter:blur(4px); background:rgba(201,168,76,.1); }
   .hero h1 { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(3rem,7vw,6.5rem); line-height:1.05; color:var(--ivory); max-width:800px; margin-bottom:16px; text-shadow:0 1px 4px rgba(0,0,0,.3); }
-  .hero h1 em { font-style:italic; color:#C9A84C; }
+  .hero h1 em { font-style:italic; color:#C9A84C; text-shadow:0 2px 12px rgba(0,0,0,.5); }
   .hero-sub { font-size:clamp(14px,1.5vw,17px); color:rgba(245,240,235,.9); font-weight:400; letter-spacing:1px; max-width:560px; line-height:1.7; margin-bottom:40px; text-shadow:0 1px 8px rgba(0,0,0,.35); }
   .hero-stats { display:flex; gap:40px; flex-wrap:wrap; }
   .hero-stat-value { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,42px); font-weight:300; color:var(--ivory); line-height:1; text-shadow:0 1px 8px rgba(0,0,0,.35); }
@@ -219,7 +219,7 @@
   .map-section .section-title { color:var(--ivory); margin-bottom:48px; }
   .map-section .section-title em { color:var(--gold-light); }
   .map-wrap { position:relative; width:100%; height:480px; overflow:hidden; border:1px solid rgba(245,240,235,.08); }
-  .map-wrap iframe { width:100%; height:100%; border:0; filter:saturate(0) brightness(.65) contrast(1.2); }
+  .map-wrap iframe { width:100%; height:100%; border:0; filter:saturate(.35) brightness(.85) contrast(1.1); }
   .map-overlay { position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg,rgba(42,42,40,.15) 0%,transparent 20%,transparent 80%,rgba(42,42,40,.25) 100%); }
   .map-details { display:flex; gap:40px; margin-top:32px; flex-wrap:wrap; }
   .map-detail { color:rgba(245,240,235,.5); font-size:13px; font-weight:300; }
