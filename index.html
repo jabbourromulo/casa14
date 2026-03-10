@@ -3,17 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2A2A28">
 <title>Residencial Vila Verde · Casa 14A · Campinas</title>
 <meta name="description" content="Casa 14A no Residencial Vila Verde, Campinas. 817m² de construção, 4 suítes, 9 banheiros, 12 vagas. Arquitetura contemporânea por Milão Arquitetos com vista para o Bosque Yitzhak Rabin. R$4.700.000.">
+<link rel="canonical" href="https://www.casa14a.com/">
+
+<!-- Open Graph -->
 <meta property="og:title" content="Casa 14A · Residencial Vila Verde · Campinas">
 <meta property="og:description" content="Residência de 817m² com arquitetura contemporânea, 4 suítes com vista para o Bosque Yitzhak Rabin, casa da piscina e acabamentos de altíssimo padrão.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="images/hero-bg.jpg">
+<meta property="og:url" content="https://www.casa14a.com/">
+<meta property="og:image" content="https://www.casa14a.com/images/hero-bg.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
 <meta property="og:locale" content="pt_BR">
-<!-- Google Analytics 4 — replace G-XXXXXXXXXX with your measurement ID -->
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Casa 14A · Residencial Vila Verde · Campinas">
+<meta name="twitter:description" content="Residência de 817m² com arquitetura contemporânea, 4 suítes com vista para o Bosque Yitzhak Rabin, casa da piscina e acabamentos de altíssimo padrão.">
+<meta name="twitter:image" content="https://www.casa14a.com/images/hero-bg.jpg">
+
+<!-- Performance: preconnect + preload hero for best LCP -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="images/hero-bg.jpg" fetchpriority="high">
+
+<!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Structured Data: RealEstateListing -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "RealEstateListing",
+  "name": "Casa 14A · Residencial Vila Verde",
+  "description": "Residência de 817m² com arquitetura contemporânea assinada por Milão Arquitetos. 4 suítes, 9 banheiros, 12 vagas, piscina com casa de apoio e acabamentos de altíssimo padrão.",
+  "url": "https://www.casa14a.com/",
+  "image": "https://www.casa14a.com/images/hero-bg.jpg",
+  "offers": { "@type": "Offer", "price": "4700000", "priceCurrency": "BRL" },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Dr. Carlos Grimaldi, 1171",
+    "addressLocality": "Campinas",
+    "addressRegion": "SP",
+    "postalCode": "13091-906",
+    "addressCountry": "BR"
+  },
+  "floorSize": { "@type": "QuantitativeValue", "value": 817, "unitCode": "MTK" },
+  "numberOfRooms": 4,
+  "numberOfBathroomsTotal": 9,
+  "numberOfParkingSpaces": 12,
+  "geo": { "@type": "GeoCoordinates", "latitude": -22.8728, "longitude": -47.0593 },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Piscina", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Home Theater", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Home Office", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Sala de Ginástica", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Adega", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Jacuzzi", "value": true }
+  ]
+}</script>
+
 <style>
   :root {
     --ivory: #F5F0EB; --warm-white: #FAF8F5; --charcoal: #2A2A28;
@@ -23,20 +76,21 @@
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
   body { font-family:'Montserrat',sans-serif; background:var(--warm-white); color:var(--charcoal); overflow-x:hidden; }
+  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 
   /* NAV */
   .nav-bar { position:fixed; top:0; left:0; right:0; z-index:100; padding:20px clamp(24px,5vw,80px); display:flex; justify-content:space-between; align-items:center; transition:all .4s; }
   .nav-bar.scrolled { background:rgba(250,248,245,.95); backdrop-filter:blur(20px); padding:14px clamp(24px,5vw,80px); box-shadow:0 1px 0 rgba(0,0,0,.06); }
-  .nav-logo { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; color:var(--ivory); letter-spacing:2px; transition:color .4s; }
+  .nav-logo { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; color:var(--ivory); letter-spacing:2px; transition:color .4s; text-decoration:none; display:flex; align-items:center; gap:12px; }
   .nav-bar.scrolled .nav-logo { color:var(--charcoal); }
+  .nav-logo-mark { width:32px; height:32px; border:1px solid currentColor; display:flex; align-items:center; justify-content:center; font-size:11px; font-family:'Montserrat',sans-serif; font-weight:500; letter-spacing:.5px; opacity:.75; flex-shrink:0; }
   .nav-cta { padding:10px 28px; background:transparent; border:1px solid rgba(245,240,235,.3); color:var(--ivory); font-size:11px; letter-spacing:2px; text-transform:uppercase; font-family:'Montserrat',sans-serif; font-weight:500; cursor:pointer; transition:all .4s; text-decoration:none; }
   .nav-bar.scrolled .nav-cta { border-color:var(--gold); color:var(--gold); }
-  .nav-cta:hover { background:var(--gold); color:#FFFFFF; border-color:var(--gold); }
-  .nav-bar.scrolled .nav-cta:hover { background:var(--gold); color:#FFFFFF; border-color:var(--gold); }
+  .nav-cta:hover { background:var(--gold); color:#fff; border-color:var(--gold); }
 
   /* HERO */
   .hero { position:relative; height:100vh; min-height:700px; display:flex; align-items:flex-end; overflow:hidden; }
-  .hero-bg { position:absolute; inset:0; background:url('images/hero-bg.jpg') center/cover no-repeat; }
+  .hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
   .hero-overlay { position:absolute; inset:0; background:linear-gradient(180deg,rgba(42,42,40,.25) 0%,rgba(42,42,40,.35) 30%,rgba(42,42,40,.6) 60%,rgba(42,42,40,.88) 100%); }
   .hero-content { position:relative; z-index:2; padding:60px clamp(24px,5vw,80px); width:100%; animation:fadeUp 1.2s ease-out; }
   .hero-badge { display:inline-block; padding:8px 20px; border:1px solid #C9A84C; color:#C9A84C; font-size:11px; letter-spacing:4px; text-transform:uppercase; font-weight:500; margin-bottom:28px; backdrop-filter:blur(4px); background:rgba(201,168,76,.1); }
@@ -45,8 +99,9 @@
   .hero-sub { font-size:clamp(14px,1.5vw,17px); color:rgba(245,240,235,.9); font-weight:400; letter-spacing:1px; max-width:560px; line-height:1.7; margin-bottom:40px; text-shadow:0 1px 8px rgba(0,0,0,.35); }
   .hero-stats { display:flex; gap:40px; flex-wrap:wrap; }
   .hero-stat-value { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,42px); font-weight:300; color:var(--ivory); line-height:1; text-shadow:0 1px 8px rgba(0,0,0,.35); }
-  .hero-stat-label { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--deep-green); font-weight:700; margin-top:6px; }
-  .scroll-indicator { position:absolute; bottom:30px; left:50%; transform:translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:8px; animation:float 3s ease-in-out infinite; }
+  .hero-stat-label { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:rgba(245,240,235,.6); font-weight:700; margin-top:6px; }
+  .scroll-indicator { position:absolute; bottom:30px; left:50%; transform:translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:8px; animation:float 3s ease-in-out infinite; transition:opacity .8s ease, visibility .8s; }
+  .scroll-indicator.hidden { opacity:0; visibility:hidden; }
   .scroll-indicator span { font-size:9px; letter-spacing:3px; text-transform:uppercase; color:rgba(245,240,235,.4); }
   .scroll-line { width:1px; height:40px; background:linear-gradient(to bottom,var(--gold-light),transparent); }
 
@@ -56,7 +111,7 @@
   .section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,4vw,3.5rem); font-weight:300; line-height:1.15; color:var(--charcoal); max-width:650px; }
   .section-title em { font-style:italic; color:var(--sage); }
 
-  /* CAROUSEL GALLERY */
+  /* GALLERY / CAROUSEL */
   .gallery { background:var(--charcoal); padding:clamp(60px,10vw,100px) clamp(24px,5vw,80px); }
   .gallery .section-label { color:var(--gold-light); }
   .gallery .section-title { color:var(--ivory); }
@@ -65,25 +120,28 @@
   .gallery-counter { font-family:'Cormorant Garamond',serif; font-size:18px; color:rgba(245,240,235,.4); font-weight:300; letter-spacing:1px; }
   .gallery-counter span { color:var(--gold-light); font-size:24px; }
   .carousel-wrap { position:relative; overflow:hidden; margin:0 calc(-1 * clamp(24px,5vw,80px)); }
-  .carousel-track { display:flex; gap:12px; transition:transform .6s cubic-bezier(.25,.46,.45,.94); padding:0 clamp(24px,5vw,80px); cursor:grab; }
+  .carousel-track { display:flex; gap:12px; transition:transform .6s cubic-bezier(.25,.46,.45,.94); padding:0 clamp(24px,5vw,80px); cursor:grab; will-change:transform; }
   .carousel-track.dragging { transition:none; cursor:grabbing; }
-  .carousel-slide { flex:0 0 40%; aspect-ratio:4/3; overflow:hidden; position:relative; border:1px solid rgba(245,240,235,.04); transition:opacity .4s; }
-  .carousel-slide img { width:100%; height:100%; object-fit:cover; transition:transform .7s ease; pointer-events:none; }
-  .carousel-slide:hover img { transform:scale(1.03); }
-  .carousel-slide::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 60%,rgba(20,20,18,.4) 100%); pointer-events:none; }
+  .carousel-slide-btn { flex:0 0 40%; aspect-ratio:4/3; overflow:hidden; position:relative; border:1px solid rgba(245,240,235,.04); background:none; padding:0; cursor:pointer; display:block; transition:opacity .4s; }
+  .carousel-slide-btn img { width:100%; height:100%; object-fit:cover; transition:transform .7s ease; pointer-events:none; display:block; }
+  .carousel-slide-btn:hover img { transform:scale(1.03); }
+  .carousel-slide-btn::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 60%,rgba(20,20,18,.4) 100%); pointer-events:none; }
+  .carousel-slide-btn:focus-visible { outline:2px solid var(--gold-light); outline-offset:2px; }
   .carousel-label { position:absolute; bottom:20px; left:24px; z-index:2; font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--ivory); font-weight:400; opacity:.8; pointer-events:none; }
   .carousel-nav { display:flex; gap:8px; margin-top:32px; align-items:center; }
   .carousel-btn { width:52px; height:52px; border:1px solid rgba(245,240,235,.15); background:transparent; color:var(--ivory); font-size:22px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .3s; }
   .carousel-btn:hover { border-color:var(--gold); color:var(--gold-light); background:rgba(184,150,90,.06); }
+  .carousel-btn:focus-visible { outline:2px solid var(--gold-light); outline-offset:2px; }
   .carousel-progress { flex:1; height:2px; background:rgba(245,240,235,.1); margin-left:20px; position:relative; overflow:hidden; }
   .carousel-progress-bar { height:100%; background:var(--gold-light); transition:width .6s ease; }
 
   /* LIGHTBOX */
-  .lightbox { display:none; position:fixed; inset:0; z-index:1000; background:rgba(20,20,18,.96); align-items:center; justify-content:center; padding:40px; }
-  .lightbox.active { display:flex; }
+  .lightbox { position:fixed; inset:0; z-index:1000; background:rgba(20,20,18,.96); display:flex; align-items:center; justify-content:center; padding:40px; opacity:0; visibility:hidden; transition:opacity .35s ease, visibility .35s; }
+  .lightbox.active { opacity:1; visibility:visible; }
   .lightbox img { max-width:90vw; max-height:85vh; object-fit:contain; }
   .lb-btn { position:absolute; background:none; border:1px solid rgba(245,240,235,.2); color:var(--ivory); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .3s; }
   .lb-btn:hover { border-color:var(--gold); color:var(--gold-light); }
+  .lb-btn:focus-visible { outline:2px solid var(--gold-light); outline-offset:2px; }
   .lb-close { top:24px; right:32px; width:48px; height:48px; font-size:24px; }
   .lb-prev { top:50%; left:24px; transform:translateY(-50%); width:56px; height:56px; font-size:22px; }
   .lb-next { top:50%; right:24px; transform:translateY(-50%); width:56px; height:56px; font-size:22px; }
@@ -99,9 +157,11 @@
   .about-visual::before { content:''; position:absolute; inset:20px; border:1px solid var(--gold); opacity:.3; z-index:1; pointer-events:none; }
   .about-visual img { width:100%; height:100%; object-fit:cover; }
 
-  /* HIGHLIGHTS */
+  /* HIGHLIGHTS TICKER */
   .highlights { background:var(--cream); padding:clamp(40px,6vw,60px) 0; overflow:hidden; }
   .highlights-track { display:flex; gap:60px; animation:scrollAnim 30s linear infinite; width:max-content; }
+  .highlights:hover .highlights-track,
+  .highlights:focus-within .highlights-track { animation-play-state:paused; }
   .highlight-item { display:flex; align-items:center; gap:16px; flex-shrink:0; }
   .highlight-item .dot { width:6px; height:6px; background:var(--gold); border-radius:50%; }
   .highlight-item span { font-family:'Cormorant Garamond',serif; font-size:clamp(18px,2vw,24px); font-weight:400; color:var(--charcoal); white-space:nowrap; }
@@ -127,6 +187,21 @@
   .material-item { padding:32px; background:var(--warm-white); border:1px solid rgba(184,150,90,.1); }
   .material-item h4 { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; color:var(--charcoal); margin-bottom:10px; }
   .material-item p { font-size:13px; line-height:1.7; color:var(--stone); font-weight:400; }
+
+  /* FLOOR PLAN */
+  .floorplan { background:var(--warm-white); }
+  .floorplan-intro { max-width:700px; margin-bottom:60px; }
+  .floorplan-intro p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:400; margin-top:24px; }
+  .floorplan-levels { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(42,42,40,.08); }
+  .floorplan-level { background:var(--warm-white); padding:36px 28px; }
+  .floorplan-level-tag { font-size:9px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:20px; display:block; }
+  .floorplan-level-name { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; color:var(--charcoal); margin-bottom:20px; line-height:1.2; }
+  .floorplan-rooms { list-style:none; }
+  .floorplan-rooms li { font-size:12px; color:var(--stone); line-height:1; padding:10px 0; border-bottom:1px solid rgba(42,42,40,.06); display:flex; align-items:center; gap:10px; }
+  .floorplan-rooms li:last-child { border-bottom:none; }
+  .floorplan-rooms li::before { content:''; width:4px; height:4px; background:var(--gold); border-radius:50%; flex-shrink:0; }
+  .floorplan-cta { margin-top:48px; text-align:center; }
+  .floorplan-cta p { font-size:13px; color:var(--stone); letter-spacing:1px; margin-bottom:24px; }
 
   /* SPECS */
   .specs { background:var(--deep-green); color:var(--ivory); display:grid; grid-template-columns:1fr 1.2fr; gap:clamp(40px,8vw,120px); align-items:start; }
@@ -156,32 +231,39 @@
   .neighbourhood-intro p { font-size:15px; line-height:1.85; color:var(--stone); font-weight:400; margin-top:24px; }
   .neighbourhood-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
   .neighbourhood-item { text-align:center; padding:32px 20px; }
-  .neighbourhood-icon { font-size:28px; margin-bottom:16px; }
+  .neighbourhood-icon { width:44px; height:44px; margin:0 auto 20px; color:var(--gold); }
+  .neighbourhood-icon svg { width:100%; height:100%; }
   .neighbourhood-item h4 { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; color:var(--charcoal); margin-bottom:8px; }
   .neighbourhood-item p { font-size:13px; line-height:1.7; color:var(--stone); font-weight:400; }
   .neighbourhood-item .distance { display:block; font-size:11px; letter-spacing:1px; color:var(--gold); font-weight:600; margin-top:8px; }
 
   /* PRICE */
-  .price-section { background:var(--cream); text-align:center; padding:clamp(80px,12vw,160px) clamp(24px,5vw,80px); }
-  .price-amount { font-family:'Cormorant Garamond',serif; font-size:clamp(3.5rem,8vw,7rem); font-weight:300; color:var(--charcoal); line-height:1; margin-bottom:8px; }
-  .price-amount .currency { font-size:.45em; vertical-align:super; color:var(--gold); font-weight:400; }
-  .price-note { font-size:14px; color:var(--stone); font-weight:400; letter-spacing:1px; margin-bottom:8px; }
-  .price-details { font-size:14px; color:var(--stone); font-weight:400; opacity:.85; }
-  .price-divider { width:60px; height:1px; background:var(--gold); margin:0 auto 48px; }
+  .price-section { background:var(--cream); text-align:center; padding:clamp(100px,14vw,180px) clamp(24px,5vw,80px); }
+  .price-eyebrow { font-size:11px; letter-spacing:6px; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:48px; }
+  .price-divider { width:1px; height:64px; background:linear-gradient(to bottom,transparent,var(--gold),transparent); margin:0 auto 48px; }
+  .price-amount { font-family:'Cormorant Garamond',serif; font-size:clamp(4rem,9vw,8rem); font-weight:300; color:var(--charcoal); line-height:1; margin-bottom:16px; letter-spacing:-2px; }
+  .price-amount .currency { font-size:.38em; vertical-align:super; color:var(--gold); font-weight:400; letter-spacing:0; margin-right:4px; }
+  .price-details { font-size:13px; color:var(--stone); font-weight:400; opacity:.7; letter-spacing:1px; }
+  .price-actions { margin-top:56px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+  /* BUTTONS */
+  .btn-primary { display:inline-block; padding:16px 48px; background:var(--gold); color:var(--charcoal); font-size:12px; letter-spacing:3px; text-transform:uppercase; font-family:'Montserrat',sans-serif; font-weight:600; text-decoration:none; transition:all .4s; cursor:pointer; border:none; }
+  .btn-primary:hover { background:var(--gold-light); transform:translateY(-2px); box-shadow:0 10px 40px rgba(184,150,90,.3); }
+  .btn-secondary { display:inline-block; padding:16px 48px; background:transparent; color:var(--ivory); font-size:12px; letter-spacing:3px; text-transform:uppercase; font-family:'Montserrat',sans-serif; font-weight:500; text-decoration:none; border:1px solid rgba(245,240,235,.2); transition:all .4s; cursor:pointer; }
+  .btn-secondary:hover { border-color:var(--gold); color:var(--gold-light); }
+  .btn-outline-dark { display:inline-block; padding:16px 48px; background:transparent; color:var(--charcoal); font-size:12px; letter-spacing:3px; text-transform:uppercase; font-family:'Montserrat',sans-serif; font-weight:500; text-decoration:none; border:1px solid rgba(42,42,40,.25); transition:all .4s; cursor:pointer; }
+  .btn-outline-dark:hover { border-color:var(--gold); color:var(--gold); }
 
   /* CTA */
   .cta-section { position:relative; text-align:center; padding:clamp(80px,12vw,140px) clamp(24px,5vw,80px); overflow:hidden; }
-  .cta-bg { position:absolute; inset:0; background:url('images/cta-bg.jpg') center/cover no-repeat; }
+  .cta-bg { position:absolute; inset:0; }
+  .cta-bg img { width:100%; height:100%; object-fit:cover; }
   .cta-overlay { position:absolute; inset:0; background:rgba(42,42,40,.88); }
   .cta-content { position:relative; z-index:2; }
   .cta-section .section-title { color:var(--ivory); max-width:600px; margin:0 auto 16px; }
   .cta-section .section-title em { color:var(--gold-light); }
   .cta-sub { font-size:15px; color:rgba(245,240,235,.5); font-weight:300; max-width:450px; margin:0 auto 48px; line-height:1.7; }
   .cta-buttons { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
-  .btn-primary { display:inline-block; padding:16px 48px; background:var(--gold); color:var(--charcoal); font-size:12px; letter-spacing:3px; text-transform:uppercase; font-family:'Montserrat',sans-serif; font-weight:600; text-decoration:none; transition:all .4s; cursor:pointer; border:none; }
-  .btn-primary:hover { background:var(--gold-light); transform:translateY(-2px); box-shadow:0 10px 40px rgba(184,150,90,.3); }
-  .btn-secondary { display:inline-block; padding:16px 48px; background:transparent; color:var(--ivory); font-size:12px; letter-spacing:3px; text-transform:uppercase; font-family:'Montserrat',sans-serif; font-weight:500; text-decoration:none; border:1px solid rgba(245,240,235,.2); transition:all .4s; cursor:pointer; }
-  .btn-secondary:hover { border-color:var(--gold); color:var(--gold-light); }
 
   /* FLOATING WHATSAPP */
   .whatsapp-float { position:fixed; bottom:28px; right:28px; z-index:99; width:56px; height:56px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(0,0,0,.25); transition:all .3s; text-decoration:none; }
@@ -201,27 +283,31 @@
   @media (max-width:900px) {
     .about { grid-template-columns:1fr; } .about-visual { min-height:350px; height:350px; }
     .specs { grid-template-columns:1fr; } .lifestyle-grid { grid-template-columns:1fr; }
-    .carousel-slide { flex:0 0 70%; }
+    .carousel-slide-btn { flex:0 0 70%; }
     .materials-grid { grid-template-columns:1fr; } .neighbourhood-grid { grid-template-columns:1fr 1fr; }
-    .map-wrap { height:350px; }
+    .map-wrap { height:350px; } .floorplan-levels { grid-template-columns:1fr 1fr; }
   }
   @media (max-width:600px) {
     .hero-stats { gap:24px; } .specs-grid { grid-template-columns:1fr; }
-    .neighbourhood-grid { grid-template-columns:1fr; }
-    .cta-buttons { flex-direction:column; align-items:center; }
-    .carousel-slide { flex:0 0 88%; } .map-wrap { height:280px; }
+    .neighbourhood-grid { grid-template-columns:1fr; } .floorplan-levels { grid-template-columns:1fr; }
+    .cta-buttons, .price-actions { flex-direction:column; align-items:center; }
+    .carousel-slide-btn { flex:0 0 88%; } .map-wrap { height:280px; }
+    .lb-prev { left:8px; } .lb-next { right:8px; }
   }
 </style>
 </head>
 <body>
 
 <nav class="nav-bar" id="nav">
-  <div></div>
+  <a href="#" class="nav-logo" aria-label="Casa 14A · Início">
+    <span class="nav-logo-mark" aria-hidden="true">14A</span>
+    Vila Verde
+  </a>
   <a href="#contact" class="nav-cta">Agendar Visita</a>
 </nav>
 
 <section class="hero">
-  <div class="hero-bg"></div>
+  <img class="hero-bg" src="images/hero-bg.jpg" alt="" role="presentation" fetchpriority="high" width="1920" height="1280">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">Exclusivo &middot; Condomínio Fechado</div>
@@ -235,43 +321,85 @@
       <div class="hero-stat"><div class="hero-stat-value">12</div><div class="hero-stat-label">Vagas</div></div>
     </div>
   </div>
-  <div class="scroll-indicator"><span>Explore</span><div class="scroll-line"></div></div>
+  <div class="scroll-indicator" id="scrollIndicator" aria-hidden="true">
+    <span>Explore</span>
+    <div class="scroll-line"></div>
+  </div>
 </section>
 
 <section class="gallery" id="galeria">
   <div class="gallery-header reveal">
     <div><div class="section-label">Galeria</div><h2 class="section-title">Conheça cada <em>detalhe</em></h2></div>
-    <div class="gallery-counter"><span id="slideNum">01</span> / 12</div>
+    <div class="gallery-counter"><span id="slideNum">01</span> / <span id="slideTotal"></span></div>
   </div>
-  <div class="carousel-wrap reveal">
+  <div class="carousel-wrap reveal" role="region" aria-label="Galeria de fotos da residência">
     <div class="carousel-track" id="carouselTrack">
-      <div class="carousel-slide" onclick="openLB(0)"><img src="images/fachada-frente.jpg" alt="Fachada da Frente"><div class="carousel-label">Fachada da Frente</div></div>
-      <div class="carousel-slide" onclick="openLB(1)"><img src="images/hero-bg.jpg" alt="Fachada de Trás" loading="lazy"><div class="carousel-label">Fachada de Trás</div></div>
-      <div class="carousel-slide" onclick="openLB(2)"><img src="images/gallery-01.jpg" alt="Living" loading="lazy"><div class="carousel-label">Living</div></div>
-      <div class="carousel-slide" onclick="openLB(3)"><img src="images/gallery-02.jpg" alt="Sala de Jantar" loading="lazy"><div class="carousel-label">Sala de Jantar</div></div>
-      <div class="carousel-slide" onclick="openLB(4)"><img src="images/gallery-03.jpg" alt="Cozinha" loading="lazy"><div class="carousel-label">Cozinha</div></div>
-      <div class="carousel-slide" onclick="openLB(5)"><img src="images/gallery-04.jpg" alt="Home Theater" loading="lazy"><div class="carousel-label">Home Theater</div></div>
-      <div class="carousel-slide" onclick="openLB(6)"><img src="images/gallery-05.jpg" alt="Home Office" loading="lazy"><div class="carousel-label">Home Office</div></div>
-      <div class="carousel-slide" onclick="openLB(7)"><img src="images/gallery-06.jpg" alt="Suítes" loading="lazy"><div class="carousel-label">Suítes</div></div>
-      <div class="carousel-slide" onclick="openLB(8)"><img src="images/gallery-07.jpg" alt="Mezanino" loading="lazy"><div class="carousel-label">Mezanino</div></div>
-      <div class="carousel-slide" onclick="openLB(9)"><img src="images/cta-bg.jpg" alt="Casa da Piscina" loading="lazy"><div class="carousel-label">Casa da Piscina</div></div>
-      <div class="carousel-slide" onclick="openLB(10)"><img src="images/gallery-09.jpg" alt="Espaço Gourmet" loading="lazy"><div class="carousel-label">Espaço Gourmet</div></div>
-      <div class="carousel-slide" onclick="openLB(11)"><img src="images/piscina.jpg" alt="Piscina" loading="lazy"><div class="carousel-label">Piscina</div></div>
+      <button class="carousel-slide-btn" data-index="0" aria-label="Abrir foto: Fachada da Frente">
+        <img src="images/fachada-frente.jpg" alt="Fachada da Frente" width="800" height="600">
+        <div class="carousel-label">Fachada da Frente</div>
+      </button>
+      <button class="carousel-slide-btn" data-index="1" aria-label="Abrir foto: Fachada de Trás">
+        <img src="images/hero-bg.jpg" alt="Fachada de Trás" loading="lazy" width="800" height="600">
+        <div class="carousel-label">Fachada de Trás</div>
+      </button>
+      <button class="carousel-slide-btn" data-index="2" aria-label="Abrir foto: Living">
+        <img src="images/gallery-01.jpg" alt="Living" loading="lazy" width="800" height="600">
+        <div class="carousel-label">Living</div>
+      </button>
+      <button class="carousel-slide-btn" data-index="3" aria-label="Abrir foto: Sala de Jantar">
+        <img src="images/gallery-02.jpg" alt="Sala de Jantar" loading="lazy" width="800" height="600">
+        <div class="carousel-label">Sala de Jantar</div>
+      </button>
+      <button class="carousel-slide-btn" data-index="4" aria-label="Abrir foto: Cozinha">
+        <img src="images/gallery-03.jpg" alt="Cozinha" loading="lazy" width="800" height="600">
+        <div class="carousel-label">Cozinha</div>
+      </button>
+      <button class="carousel-slide-btn" data-index="5" aria-label="Abrir foto: Home Theater">
+        <img src="images/gallery-04.jpg" alt="Home Theater" loading="lazy" width="800" height="600">
+        <div class="carousel-label">Home Theater</div>
+      </button>
+      <button class="carousel-slide-btn" data-index="6" aria-label="Abrir foto: Home Office">
+        <img src="images/gallery-05.jpg" alt="Home Office" loading="lazy" width="800" height="600">
+        <div class="carousel-label">Home Office</div>
+      </button>
+      <button class="carousel-slide-btn" data-index="7" aria-label="Abrir foto: Suítes">
+        <img src="images/gallery-06.jpg" alt="Suítes" loading="lazy" width="800" height="600">
+        <div class="carousel-label">Suítes</div>
+      </button>
+      <button class="carousel-slide-btn" data-index="8" aria-label="Abrir foto: Mezanino">
+        <img src="images/gallery-07.jpg" alt="Mezanino" loading="lazy" width="800" height="600">
+        <div class="carousel-label">Mezanino</div>
+      </button>
+      <button class="carousel-slide-btn" data-index="9" aria-label="Abrir foto: Casa da Piscina">
+        <img src="images/cta-bg.jpg" alt="Casa da Piscina" loading="lazy" width="800" height="600">
+        <div class="carousel-label">Casa da Piscina</div>
+      </button>
+      <button class="carousel-slide-btn" data-index="10" aria-label="Abrir foto: Espaço Gourmet">
+        <img src="images/gallery-09.jpg" alt="Espaço Gourmet" loading="lazy" width="800" height="600">
+        <div class="carousel-label">Espaço Gourmet</div>
+      </button>
+      <button class="carousel-slide-btn" data-index="11" aria-label="Abrir foto: Piscina">
+        <img src="images/piscina.jpg" alt="Piscina" loading="lazy" width="800" height="600">
+        <div class="carousel-label">Piscina</div>
+      </button>
     </div>
   </div>
   <div class="carousel-nav reveal" style="padding:0 clamp(24px,5vw,80px);">
-    <button class="carousel-btn" onclick="moveCarousel(-1)" aria-label="Foto anterior">&#8249;</button>
-    <button class="carousel-btn" onclick="moveCarousel(1)" aria-label="Próxima foto">&#8250;</button>
-    <div class="carousel-progress"><div class="carousel-progress-bar" id="progressBar" style="width:8.33%"></div></div>
+    <button class="carousel-btn" id="prevBtn" aria-label="Foto anterior">&#8249;</button>
+    <button class="carousel-btn" id="nextBtn" aria-label="Próxima foto">&#8250;</button>
+    <div class="carousel-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+      <div class="carousel-progress-bar" id="progressBar"></div>
+    </div>
   </div>
 </section>
 
-<div class="lightbox" id="lb">
-  <button class="lb-btn lb-close" onclick="closeLB()" aria-label="Fechar">&#10005;</button>
-  <button class="lb-btn lb-prev" onclick="navLB(-1)" aria-label="Foto anterior">&#8249;</button>
-  <img id="lb-img" src="" alt="Foto da residência Vila Verde">
-  <button class="lb-btn lb-next" onclick="navLB(1)" aria-label="Próxima foto">&#8250;</button>
-  <div class="lb-counter" id="lb-counter"></div>
+<!-- Lightbox -->
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Visualização em tela cheia">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Fechar">&#10005;</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Foto anterior">&#8249;</button>
+  <img id="lb-img" src="" alt="" width="1200" height="900">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Próxima foto">&#8250;</button>
+  <div class="lb-counter" id="lb-counter" aria-live="polite"></div>
 </div>
 
 <section class="about">
@@ -287,11 +415,11 @@
     </div>
   </div>
   <div class="about-visual reveal">
-    <img src="images/gallery-02.jpg" alt="Sala de Jantar Vila Verde" loading="lazy">
+    <img src="images/gallery-02.jpg" alt="Sala de Jantar da Casa 14A, Vila Verde" loading="lazy" width="800" height="600">
   </div>
 </section>
 
-<div class="highlights">
+<div class="highlights" aria-hidden="true">
   <div class="highlights-track">
     <div class="highlight-item"><div class="dot"></div><span>Home Theater sob medida</span></div>
     <div class="highlight-item"><div class="dot"></div><span>Home Office independente</span></div>
@@ -315,7 +443,11 @@
 </div>
 
 <section class="lifestyle">
-  <div class="lifestyle-intro reveal"><div class="section-label">Infraestrutura</div><h2 class="section-title">Espaços que fazem a <em>diferença</em></h2><p>Cada nível da residência foi planejado para oferecer o máximo em conforto, funcionalidade e privacidade, com acabamentos de altíssimo padrão e marcenaria sob medida.</p></div>
+  <div class="lifestyle-intro reveal">
+    <div class="section-label">Infraestrutura</div>
+    <h2 class="section-title">Espaços que fazem a <em>diferença</em></h2>
+    <p>Cada nível da residência foi planejado para oferecer o máximo em conforto, funcionalidade e privacidade, com acabamentos de altíssimo padrão e marcenaria sob medida.</p>
+  </div>
   <div class="lifestyle-grid reveal">
     <div class="lifestyle-card"><div class="lifestyle-number">01</div><h3>Área Social</h3><p>Living com pé-direito duplo, ampla sala de jantar para 12 pessoas, sala da lareira com cristaleira e adega, home theater com marcenaria sob medida para 10 pessoas, lavabo com bancada em Corian e hall de entrada com porta pivotante de 120cm.</p></div>
     <div class="lifestyle-card"><div class="lifestyle-number">02</div><h3>Área Íntima</h3><p>4 suítes com closet voltadas para o Bosque Yitzhak Rabin. Suíte master com sala de banho e banheira Jacuzzi com vista para a piscina. Duas suítes com varanda. Home office com entrada independente. Ateliê junto à garagem.</p></div>
@@ -324,7 +456,11 @@
 </section>
 
 <section class="materials">
-  <div class="materials-intro reveal"><div class="section-label">Acabamentos</div><h2 class="section-title">Materiais nobres em cada <em>detalhe</em></h2><p>Seleção criteriosa de materiais nacionais e importados, com marcenaria sob medida em madeiras nobres e acabamentos de primeira linha.</p></div>
+  <div class="materials-intro reveal">
+    <div class="section-label">Acabamentos</div>
+    <h2 class="section-title">Materiais nobres em cada <em>detalhe</em></h2>
+    <p>Seleção criteriosa de materiais nacionais e importados, com marcenaria sob medida em madeiras nobres e acabamentos de primeira linha.</p>
+  </div>
   <div class="materials-grid reveal">
     <div class="material-item"><h4>Pisos Nobres</h4><p>Tábuas de Peroba Mica e Marfim (Felgueiras Madeiras Nobres) nas salas, quartos e closets. Pedra São Tomé branca com detalhes em Mármore Nero Marchina no living e hall. Mosaico Português externo.</p></div>
     <div class="material-item"><h4>Mármores &amp; Granitos</h4><p>Bancadas em Granito São Gabriel nas cozinhas. Mármore Piguês (Grécia) nos banheiros. Lareira revestida em Mármore Nero Marchina com acabamento Velvet. Piso atérmico Castelatto no entorno da piscina.</p></div>
@@ -335,8 +471,77 @@
   </div>
 </section>
 
+<section class="floorplan">
+  <div class="floorplan-intro reveal">
+    <div class="section-label">Distribuição</div>
+    <h2 class="section-title">Três pavimentos de <em>excelência</em></h2>
+    <p>A residência se distribui em três níveis integrados, cada um com função e privacidade próprias, conectados por escadaria em mármore e mezanino com pé-direito duplo.</p>
+  </div>
+  <div class="floorplan-levels reveal">
+    <div class="floorplan-level">
+      <span class="floorplan-level-tag">Subsolo</span>
+      <div class="floorplan-level-name">Garagem &amp; Serviço</div>
+      <ul class="floorplan-rooms">
+        <li>6 vagas cobertas</li>
+        <li>6 vagas descobertas</li>
+        <li>Ateliê / Hobby</li>
+        <li>Dois depósitos</li>
+        <li>Suíte de serviço</li>
+        <li>Lavanderia</li>
+      </ul>
+    </div>
+    <div class="floorplan-level">
+      <span class="floorplan-level-tag">Térreo</span>
+      <div class="floorplan-level-name">Área Social</div>
+      <ul class="floorplan-rooms">
+        <li>Hall de entrada</li>
+        <li>Living pé-direito duplo</li>
+        <li>Sala de jantar (12 p.)</li>
+        <li>Sala da lareira &amp; adega</li>
+        <li>Home theater (10 p.)</li>
+        <li>Cozinha</li>
+        <li>Lavabo</li>
+        <li>Home office (ent. indep.)</li>
+      </ul>
+    </div>
+    <div class="floorplan-level">
+      <span class="floorplan-level-tag">Superior</span>
+      <div class="floorplan-level-name">Área Íntima</div>
+      <ul class="floorplan-rooms">
+        <li>Suíte master + Jacuzzi</li>
+        <li>Closet master</li>
+        <li>Suíte 2 + varanda</li>
+        <li>Suíte 3 + varanda</li>
+        <li>Suíte 4</li>
+        <li>Sala de ginástica</li>
+        <li>Mezanino</li>
+      </ul>
+    </div>
+    <div class="floorplan-level">
+      <span class="floorplan-level-tag">Externo</span>
+      <div class="floorplan-level-name">Casa da Piscina</div>
+      <ul class="floorplan-rooms">
+        <li>Piscina aquecida</li>
+        <li>Sala envidraçada</li>
+        <li>Cozinha gourmet</li>
+        <li>Churrasqueira</li>
+        <li>Forno de pizza</li>
+        <li>Jardim &amp; pomar</li>
+      </ul>
+    </div>
+  </div>
+  <div class="floorplan-cta reveal">
+    <p>Plantas completas disponíveis mediante solicitação</p>
+    <a href="https://wa.me/5519999742657?text=Olá! Gostaria de solicitar as plantas da casa 14A do Residencial Vila Verde." class="btn-primary" target="_blank" rel="noopener">Solicitar Plantas</a>
+  </div>
+</section>
+
 <section class="specs">
-  <div class="specs-left reveal"><div class="section-label">Especificações</div><h2 class="section-title">Números que <em>impressionam</em></h2><p>Uma residência deste porte é rara no mercado de Campinas. Localização privilegiada a 1,5 km do Galleria Shopping, com fácil acesso à Rodovia Dom Pedro I.</p></div>
+  <div class="specs-left reveal">
+    <div class="section-label">Especificações</div>
+    <h2 class="section-title">Números que <em>impressionam</em></h2>
+    <p>Uma residência deste porte é rara no mercado de Campinas. Localização privilegiada a 1,5 km do Galleria Shopping, com fácil acesso à Rodovia Dom Pedro I.</p>
+  </div>
   <div class="specs-grid reveal">
     <div class="spec-item"><div class="spec-value">817m²</div><div class="spec-label">Área Construída</div></div>
     <div class="spec-item"><div class="spec-value">1.633m²</div><div class="spec-label">Terreno</div></div>
@@ -350,9 +555,12 @@
 </section>
 
 <section class="map-section">
-  <div class="reveal"><div class="section-label">Localização</div><h2 class="section-title" style="color:var(--ivory);">Av. Dr. Carlos Grimaldi, 1171 &mdash; <em style="color:var(--gold-light);">Jardim Madalena</em></h2></div>
+  <div class="reveal">
+    <div class="section-label">Localização</div>
+    <h2 class="section-title" style="color:var(--ivory);">Av. Dr. Carlos Grimaldi, 1171 &mdash; <em style="color:var(--gold-light);">Jardim Madalena</em></h2>
+  </div>
   <div class="map-wrap reveal">
-    <iframe src="https://www.google.com/maps?q=Residencial+Vila+Verde,+Av.+Carlos+Grimaldi+1171,+Campinas,+SP,+Brasil&hl=pt-BR&z=15&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps?q=Residencial+Vila+Verde,+Av.+Carlos+Grimaldi+1171,+Campinas,+SP,+Brasil&hl=pt-BR&z=15&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Residencial Vila Verde no mapa"></iframe>
     <div class="map-overlay"></div>
   </div>
   <div class="map-details reveal">
@@ -371,25 +579,33 @@
   </div>
   <div class="neighbourhood-grid reveal">
     <div class="neighbourhood-item">
-      <div class="neighbourhood-icon">&#128722;</div>
+      <div class="neighbourhood-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      </div>
       <h4>Compras &amp; Gastronomia</h4>
       <p>Galleria Shopping, Sam&rsquo;s Club, Tauste Supermercados e Galleria Plaza com restaurantes e serviços</p>
       <span class="distance">1,5 km</span>
     </div>
     <div class="neighbourhood-item">
-      <div class="neighbourhood-icon">&#127891;</div>
+      <div class="neighbourhood-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      </div>
       <h4>Escolas &amp; Universidades</h4>
       <p>Colégio Notre Dame, Escola Comunitária de Campinas, PUC-Campinas e UNICAMP</p>
       <span class="distance">3 &ndash; 10 km</span>
     </div>
     <div class="neighbourhood-item">
-      <div class="neighbourhood-icon">&#127973;</div>
+      <div class="neighbourhood-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+      </div>
       <h4>Saúde</h4>
       <p>Hospital Vera Cruz, Hospital Madre Theodora e Centro Médico de Campinas</p>
       <span class="distance">4 &ndash; 8 km</span>
     </div>
     <div class="neighbourhood-item">
-      <div class="neighbourhood-icon">&#128739;</div>
+      <div class="neighbourhood-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
       <h4>Acesso &amp; Mobilidade</h4>
       <p>Rodovia Dom Pedro I, Rodovia Anhanguera e Aeroporto de Viracopos</p>
       <span class="distance">2 &ndash; 18 km</span>
@@ -399,28 +615,34 @@
 
 <section class="price-section">
   <div class="reveal">
-    <div class="section-label">Investimento</div>
+    <div class="price-eyebrow">Investimento</div>
     <div class="price-divider"></div>
     <div class="price-amount"><span class="currency">R$</span>4.700.000</div>
     <p class="price-details">Condomínio R$ 1.982/mês &middot; IPTU R$ 28.000/ano</p>
+    <div class="price-actions">
+      <a href="https://wa.me/5519999742657?text=Olá! Tenho interesse na casa 14A do Residencial Vila Verde - R$4.700.000" class="btn-primary" target="_blank" rel="noopener">Agendar Visita</a>
+      <a href="mailto:edjbbour@gmail.com?subject=Interesse - Casa 14A Vila Verde Campinas" class="btn-outline-dark">Enviar E-mail</a>
+    </div>
   </div>
 </section>
 
 <section class="cta-section" id="contact">
-  <div class="cta-bg"></div>
+  <div class="cta-bg">
+    <img src="images/cta-bg.jpg" alt="" role="presentation" loading="lazy" width="1920" height="1080">
+  </div>
   <div class="cta-overlay"></div>
   <div class="cta-content reveal">
     <div class="section-label" style="color:var(--gold-light);">Interesse?</div>
     <h2 class="section-title">Agende sua visita <em>exclusiva</em></h2>
     <p class="cta-sub">Entre em contato para conhecer pessoalmente cada detalhe desta residência excepcional no Residencial Vila Verde.</p>
     <div class="cta-buttons">
-      <a href="https://wa.me/5519999742657?text=Olá! Tenho interesse na casa 14A do Residencial Vila Verde - R$4.700.000" class="btn-primary" target="_blank">WhatsApp</a>
-      <a href="mailto:vilaverdecasa14a@gmail.com?subject=Interesse - Casa 14A Vila Verde Campinas" class="btn-secondary">Enviar E-mail</a>
+      <a href="https://wa.me/5519999742657?text=Olá! Tenho interesse na casa 14A do Residencial Vila Verde - R$4.700.000" class="btn-primary" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:edjbbour@gmail.com?subject=Interesse - Casa 14A Vila Verde Campinas" class="btn-secondary">Enviar E-mail</a>
     </div>
   </div>
 </section>
 
-<a href="https://wa.me/5519999742657?text=Olá! Tenho interesse na casa 14A do Residencial Vila Verde - R$4.700.000" class="whatsapp-float" target="_blank" aria-label="Contato via WhatsApp">
+<a href="https://wa.me/5519999742657?text=Olá! Tenho interesse na casa 14A do Residencial Vila Verde - R$4.700.000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contato via WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
@@ -430,64 +652,163 @@
 </footer>
 
 <script>
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 80));
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) { setTimeout(() => entry.target.classList.add('visible'), i * 80); observer.unobserve(entry.target); }
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Carousel
-  const track = document.getElementById('carouselTrack');
-  const slides = track.querySelectorAll('.carousel-slide');
-  const total = slides.length;
-  let cur = 0;
-
-  function goTo(idx) {
-    cur = Math.max(0, Math.min(idx, total - 1));
-    const offset = slides[cur].offsetLeft - parseInt(getComputedStyle(track).paddingLeft);
-    track.style.transform = 'translateX(' + (-offset) + 'px)';
-    document.getElementById('slideNum').textContent = String(cur + 1).padStart(2, '0');
-    document.getElementById('progressBar').style.width = ((cur + 1) / total * 100) + '%';
+// ── Nav scroll + scroll indicator hide ────────────────────────────────────────
+const nav = document.getElementById('nav');
+const scrollIndicator = document.getElementById('scrollIndicator');
+let indicatorHidden = false;
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 80);
+  if (!indicatorHidden && window.scrollY > 80) {
+    indicatorHidden = true;
+    scrollIndicator.classList.add('hidden');
   }
-  function moveCarousel(dir) { goTo(cur + dir); }
+}, { passive: true });
 
-  let dragStart = 0, dragOff = 0, dragging = false;
-  track.addEventListener('mousedown', e => { dragging = true; dragStart = e.clientX; track.classList.add('dragging'); });
-  track.addEventListener('touchstart', e => { dragging = true; dragStart = e.touches[0].clientX; }, {passive:true});
-  window.addEventListener('mousemove', e => { if (dragging) dragOff = e.clientX - dragStart; });
-  window.addEventListener('touchmove', e => { if (dragging) dragOff = e.touches[0].clientX - dragStart; }, {passive:true});
-  function endDrag() { if (!dragging) return; dragging = false; track.classList.remove('dragging'); if (Math.abs(dragOff) > 60) moveCarousel(dragOff < 0 ? 1 : -1); dragOff = 0; }
-  window.addEventListener('mouseup', endDrag);
-  window.addEventListener('touchend', endDrag);
-
-  // Lightbox
-  const imgs = [
-    'images/fachada-frente.jpg',
-    'images/hero-bg.jpg',
-    'images/gallery-01.jpg',
-    'images/gallery-02.jpg',
-    'images/gallery-03.jpg',
-    'images/gallery-04.jpg',
-    'images/gallery-05.jpg',
-    'images/gallery-06.jpg',
-    'images/gallery-07.jpg',
-    'images/cta-bg.jpg',
-    'images/gallery-09.jpg',
-    'images/piscina.jpg'];
-  let ci = 0;
-  function openLB(i) { ci = i; updLB(); document.getElementById('lb').classList.add('active'); document.body.style.overflow = 'hidden'; }
-  function closeLB() { document.getElementById('lb').classList.remove('active'); document.body.style.overflow = ''; }
-  function navLB(dir) { ci = (ci + dir + imgs.length) % imgs.length; updLB(); }
-  function updLB() { document.getElementById('lb-img').src = imgs[ci]; document.getElementById('lb-counter').textContent = (ci+1) + ' / ' + imgs.length; }
-  document.addEventListener('keydown', e => {
-    if (document.getElementById('lb').classList.contains('active')) {
-      if (e.key==='Escape') closeLB(); if (e.key==='ArrowRight') navLB(1); if (e.key==='ArrowLeft') navLB(-1);
+// ── Reveal on scroll ──────────────────────────────────────────────────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     }
   });
-  document.getElementById('lb').addEventListener('click', e => { if (e.target === document.getElementById('lb')) closeLB(); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── Carousel ──────────────────────────────────────────────────────────────────
+const track    = document.getElementById('carouselTrack');
+const slides   = Array.from(track.querySelectorAll('.carousel-slide-btn'));
+const total    = slides.length;
+let cur = 0;
+
+document.getElementById('slideTotal').textContent = String(total).padStart(2, '0');
+
+function goTo(idx, animated) {
+  const wrap = ((idx % total) + total) % total;
+  const isJump = Math.abs(wrap - cur) > 1 && animated !== false;
+  if (!animated && animated !== undefined) track.style.transition = 'none';
+  cur = wrap;
+  const pad = parseFloat(getComputedStyle(track).paddingLeft);
+  track.style.transform = `translateX(${-(slides[cur].offsetLeft - pad)}px)`;
+  if (!animated && animated !== undefined) {
+    requestAnimationFrame(() => requestAnimationFrame(() => { track.style.transition = ''; }));
+  }
+  document.getElementById('slideNum').textContent = String(cur + 1).padStart(2, '0');
+  document.getElementById('progressBar').style.width = ((cur + 1) / total * 100) + '%';
+  document.getElementById('progressBar').parentElement.setAttribute('aria-valuenow', Math.round((cur + 1) / total * 100));
+}
+goTo(0, false);
+
+document.getElementById('prevBtn').addEventListener('click', () => goTo(cur - 1));
+document.getElementById('nextBtn').addEventListener('click', () => goTo(cur + 1));
+
+// Keyboard nav on carousel region
+track.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') { e.preventDefault(); goTo(cur + 1); }
+  if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(cur - 1); }
+});
+
+// Drag / swipe carousel
+let dragStart = 0, dragOff = 0, dragging = false, didDrag = false;
+track.addEventListener('mousedown', e => {
+  dragging = true; didDrag = false; dragStart = e.clientX;
+  track.classList.add('dragging');
+});
+track.addEventListener('touchstart', e => {
+  dragging = true; didDrag = false; dragStart = e.touches[0].clientX;
+}, { passive: true });
+window.addEventListener('mousemove', e => {
+  if (!dragging) return;
+  dragOff = e.clientX - dragStart;
+  if (Math.abs(dragOff) > 5) didDrag = true;
+});
+window.addEventListener('touchmove', e => {
+  if (!dragging) return;
+  dragOff = e.touches[0].clientX - dragStart;
+  if (Math.abs(dragOff) > 5) didDrag = true;
+}, { passive: true });
+function endDrag() {
+  if (!dragging) return;
+  dragging = false;
+  track.classList.remove('dragging');
+  if (Math.abs(dragOff) > 60) goTo(cur + (dragOff < 0 ? 1 : -1));
+  dragOff = 0;
+}
+window.addEventListener('mouseup', endDrag);
+window.addEventListener('touchend', endDrag);
+
+// Prevent lightbox open on drag
+slides.forEach(slide => {
+  slide.addEventListener('click', e => {
+    if (didDrag) { didDrag = false; return; }
+    openLB(parseInt(slide.dataset.index, 10));
+  });
+});
+
+// ── Lightbox ──────────────────────────────────────────────────────────────────
+const lbImgs = [
+  'images/fachada-frente.jpg','images/hero-bg.jpg','images/gallery-01.jpg',
+  'images/gallery-02.jpg','images/gallery-03.jpg','images/gallery-04.jpg',
+  'images/gallery-05.jpg','images/gallery-06.jpg','images/gallery-07.jpg',
+  'images/cta-bg.jpg','images/gallery-09.jpg','images/piscina.jpg'
+];
+const lbLabels = [
+  'Fachada da Frente','Fachada de Trás','Living','Sala de Jantar','Cozinha',
+  'Home Theater','Home Office','Suítes','Mezanino','Casa da Piscina',
+  'Espaço Gourmet','Piscina'
+];
+const lb = document.getElementById('lb');
+let ci = 0, lastFocus = null;
+
+function openLB(i) {
+  ci = i; updLB();
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  lastFocus = document.activeElement;
+  document.getElementById('lbClose').focus();
+}
+function closeLB() {
+  lb.classList.remove('active');
+  document.body.style.overflow = '';
+  if (lastFocus) lastFocus.focus();
+}
+function navLB(dir) { ci = (ci + dir + lbImgs.length) % lbImgs.length; updLB(); }
+function updLB() {
+  const img = document.getElementById('lb-img');
+  img.src = lbImgs[ci];
+  img.alt = lbLabels[ci];
+  document.getElementById('lb-counter').textContent = (ci + 1) + ' / ' + lbImgs.length;
+}
+
+document.getElementById('lbClose').addEventListener('click', closeLB);
+document.getElementById('lbPrev').addEventListener('click', () => navLB(-1));
+document.getElementById('lbNext').addEventListener('click', () => navLB(1));
+
+// Lightbox mobile swipe
+let lbTouchX = 0;
+lb.addEventListener('touchstart', e => { lbTouchX = e.touches[0].clientX; }, { passive: true });
+lb.addEventListener('touchend', e => {
+  const diff = e.changedTouches[0].clientX - lbTouchX;
+  if (Math.abs(diff) > 50) navLB(diff < 0 ? 1 : -1);
+});
+
+// Lightbox keyboard + focus trap
+lb.addEventListener('keydown', e => {
+  if (!lb.classList.contains('active')) return;
+  if (e.key === 'Escape') { closeLB(); return; }
+  if (e.key === 'ArrowRight') { navLB(1); return; }
+  if (e.key === 'ArrowLeft')  { navLB(-1); return; }
+  if (e.key === 'Tab') {
+    const focusable = Array.from(lb.querySelectorAll('button'));
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  }
+});
+lb.addEventListener('click', e => { if (e.target === lb) closeLB(); });
 </script>
 </body>
 </html>
